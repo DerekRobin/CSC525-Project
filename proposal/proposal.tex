@@ -1,46 +1,44 @@
 \documentclass[conference]{IEEEtran}
-
-% Packages
-
 \usepackage{cite}
-\usepackage{listings}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage{booktabs}
-\usepackage{parskip}
-\setlength{\parskip}{1em}
-\usepackage[bottom]{footmisc}
 \usepackage{url}
-\begin{document}
-\input{commands} % For name commands like "\derek"
+\usepackage{graphicx}
 
-\title{CSC-525 Project Proposal}
+\title{A Research Proposal for \\``Phylogenetic Analysis of lncRNAs Implicated in Alzheimer's Disease''}
 
-\author{\IEEEauthorblockN{Derek Robinson, Mina, Mazyar}
-\IEEEauthorblockA{\textit{Department of Computer Science} \\
-\textit{University of Victoria}\\
+\author{Derek Robinson, Mina Emadi, Mazyar Ghezelji\\
+University of Victoria\\
 Victoria, Canada \\
-drobinson@uvic.ca, emails for Mina and Mazyar}
-}
+\{drobinson, minaemadi, mazyarghezelji\}@uvic.ca}
 
-% make the title area
+\begin{document}
+
 \maketitle
 
 \section{Motivation}
 
-TODO
+There is no doubt that Alzheimer's disease (AD) greatly affects the lives of those diagnosed and those who care for the diagnosed. 
+In the United States, AD is currently the sixth leading cause of death for American adults \cite{AlzheimersDisease}. 
+In Canada, over 747,000 patients are living with AD, or another form of dementia \cite{ADcanada}. 
+While many humans suffer from AD, it is not well understood if other great apes (hominidae) also suffer from AD. 
+Finch and Austad argue that with our current understanding of AD it is not possible to determine if AD is uniquely human \cite{finch2015commentary}.
+As a group, we are interested in learning more about AD, specifically, the the phylogeny of the long non-coding RNAs (lncRNAs) which has been implicated in AD \cite{luo2016long}. 
 
-\section{Objectives}
+\section{Objective}
 
-Right now we don't really have a concrete project idea. However, we do have some ideas. One of which includes choosing a lncRNA from \cite{luo2016long} and performing some analysis on it such as phylogenetics or some other analysis.
+Our main objective for this research project is to build the phylogenetic tree for one of the lncRNAs implicated in AD, as identified by Luo and Chen \cite{luo2016long}. 
+Our current targets are brain cytoplasmic 200 (BC200) and $\beta$-site amyloid precursor protein cleaving enzyme-1 antisense transcript (BACE1-AS). 
+As we have already performed a preliminary BLAST search which identified several similar sequences to BC200, we will likely choose BC200 as our main target for phylogenetic analysis \cite{madden2012blast,blastTool}. 
+Figure 1 shows the results of our preliminary blast search, showing several hits for similar sequences in the hominidae family.
+Our secondary goal for this research project is to compare the structure of the most closely related homologs of our lncRNA in order to shine light on the possible differences that may lead to AD being uniquely human.
 
 \section{Methods}
 
-TODO
+The methods we will be applying are those similar to Amirmahani and Goharrizi \cite{amirmahani2018phylogenetic}. 
+Specifically, we will be using the bioinformatics program NCBI-BLAST in order to identify homologs of our chosen lncRNA \cite{madden2012blast,blastTool}. 
+Once we have identified several homologs of our chosen lncRNA, we will then perform the the phylogenetic analysis using MEGA11 \cite{tamura2021mega11}. 
+Our phylogenetic tree will be created via all available tree construction algorithms (Maximum Likelihood, Neighbor Joining, and Minimum-Evolution) and each of the results will be compared. 
+Once we have built the phylogenetic tree, we will then compare the secondary structure of the three most closely related homologs using RNAz 2.0 \cite{gruber2010rnaz}.
 
 \bibliographystyle{IEEEtran}
-\bibliography{../refs/refs.bib}
+\bibliography{refs.bib}
 \end{document}
