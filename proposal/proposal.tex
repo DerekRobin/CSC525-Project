@@ -2,6 +2,8 @@
 \usepackage{cite}
 \usepackage{url}
 \usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{parskip}
 
 \title{\vspace{-0.5cm}A Research Proposal for \\``Phylogenetic Analysis of lncRNAs Implicated in Alzheimer's Disease''}
 
@@ -11,6 +13,9 @@ Victoria, Canada \\
 \{drobinson, minaemadi, mazyarghezelji\}@uvic.ca}
 
 \begin{document}
+\newlist{questions}{enumerate}{2}
+\setlist[questions,1]{label=RQ\arabic*.,ref=RQ\arabic*}
+\setlist[questions,2]{label=(\alph*),ref=\thequestionsi(\alph*)}
 
 \maketitle
 
@@ -22,13 +27,20 @@ In Canada, over 747,000 patients are living with AD, or another form of dementia
 While many humans suffer from AD, it is not well understood if other great apes (Hominidae) also suffer from AD. 
 Finch and Austad argue that with our current understanding of AD, it is not possible to determine if AD is uniquely human \cite{finch2015commentary}.
 As a group, we are interested in learning more about AD; specifically, the phylogeny of the long non-coding RNAs (lncRNAs) which have been implicated in AD \cite{luo2016long}. 
+We have chosen to work on lncRNA as a majority of the human genome is transcribed into non-coding RNA sequences.
 
 \section{Objective}
 
 Our main objective for this research project is to build the phylogenetic tree for one of the lncRNAs implicated in AD, as identified by Luo and Chen \cite{luo2016long}. 
-Our current targets are brain cytoplasmic 200 (BC200) and $\beta$-site amyloid precursor protein cleaving enzyme-1 antisense transcript (BACE1-AS). 
-Having already performed a preliminary BLAST search identifying several similar sequences to BC200, we will likely choose BC200 as our main target for phylogenetic analysis \cite{madden2012blast,blastTool}. 
+Our current target is brain cytoplasmic 200 (BC200) as we have already performed a preliminary BLAST search identifying several similar sequences to BC200 \cite{madden2012blast,blastTool}. 
 Our secondary goal for this research project is to compare the structure of our lncRNA's most closely related homologs to shine light on the possible differences that may lead to AD being uniquely human.
+
+Thus, our research questions are as follows:
+
+\begin{questions}
+    \item What does the phylogenetic tree of BC200 look like?
+    \item What structural differences are there in the three most closely related homologs of BC200?
+\end{questions}
 
 \section{Methods}
 
