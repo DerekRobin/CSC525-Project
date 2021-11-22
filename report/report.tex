@@ -80,36 +80,51 @@ They demonstrate that BC200 is a potent positive regulator of BACE1 in AD cells 
 
 \section{Materials and Methods}\label{sec:methods}
 
-\subsection{Selection of lncRNAs}
-The lncRNA BC200 was selected for phylogenetic analysis due to the role it plays in AD as discussed in section \ref{sec:background}. 
-The homologs of BC200 were selected as a result of an NCBI Blast \cite{blastTool}. Specifically, Megablast \cite{morgulis2008database} with default parameters was used as it is able to compare closely related sequences \cite{amirmahani2018phylogenetic}. 
-From the Blast results, sequences which are known BC200 homologs as indicated by the inclusion of BC200 in their name were chosen. 
+\subsection{Selection of lncRNAs}\label{sec:lncRNA-selection}
+The lncRNA BC200 was selected for phylogenetic and structural analysis due to the role it plays in AD as discussed in section \ref{sec:background}. 
+The homologs of BC200 were selected as a result of an NCBI Blast \cite{blastTool} search. 
+Specifically, Megablast \cite{morgulis2008database} with default parameters was used as it is able to compare closely related sequences \cite{amirmahani2018phylogenetic}. 
+From the Blast results, the top six sequences which are known BC200 homologs as indicated by the inclusion of BC200 in their name were chosen. 
+Two of the top hits in the Blast results were complete bacterial artificial chromosome sequences for pan troglodytes. 
+Inclusion of these two sequences (accession numbers: AC185986.3, AC183594.3) caused errors in the analysis software described in section \ref{sec:phylo} and section \ref{sec:structure}. 
 Table \ref{tbl:accession} outlines the sequence name including the organism and the accession number of each of the chosen sequences. 
 
-\begin{table*}[h]
+\begin{table}[h]
   \centering
-  \caption{Sequence information for BC200 and hominoidea homologs}
+  \caption{lncRNA Sequence Information}
   \label{tbl:accession}
   \begin{tabular}{lc}
     \toprule
-    Sequence Name & Accession Number \\
+    Organism Name & Sequence Accession Number \\
     \midrule
-    Homo sapiens brain cytoplasmic RNA 1 (BCYRN1), long non-coding RNA & NR\_001568.1 \\
-    Pongo pygmaeus BC200 alpha scRNA gene, complete sequence           & AF067778.1 \\
-    Pan paniscus BC200 alpha scRNA gene, complete sequence             & AF067778.1 \\
-    Gorilla gorilla BC200 alpha scRNA gene, complete sequence          & AF067779.1 \\
-    Macaca mulatta BC200 alpha scRNA gene, complete sequence           & AF067784.1 \\
-    Hylobates lar BC200 alpha scRNA gene, complete sequence            & AF067781.1 \\
-    Papio hamadryas BC200 alpha scRNA gene, complete sequence          & AF067782.1 \\
+    Homo sapiens    & NR\_001568.1 \\
+    Pongo pygmaeus  & AF067778.1 \\
+    Pan paniscus    & AF067778.1 \\
+    Gorilla gorilla & AF067779.1 \\
+    Macaca mulatta  & AF067784.1 \\
+    Hylobates lar   & AF067781.1 \\
+    Papio hamadryas & AF067782.1 \\
     \bottomrule
   \end{tabular}
-\end{table*}
+\end{table}
 
-\subsection{Phylogenetic Analysis}
-TODO
+\subsection{Phylogenetic Analysis}\label{sec:phylo}
 
-\subsection{Structural Analysis}
-In order to find RNA secondary structure of BC200 and three of closest homologs of it, we used FORNA, a platform for drawing the secondary RNA structure. We draw each homolog structure individually. We also draw BC200. First, we analyzed BC200 structure individually to get a better understanding of its function in body. Knowing that BC200 structure consist of three main domains, we also look at its homologs from this view points. Comparing each structure to BC200, we divided them to three main domains like BC200 structure and based on each part function we analyzed the structural differences.
+The lncRNA sequences chosen in table \ref{tbl:accession} were used to build the phylogenetic tree. 
+The phylogenetic tree was built with the Mega11 \cite{tamura2021mega11} bioinformatics software. 
+The parameters of the analysis were kept to their default values. 
+Namely, the statistical method used was maximum likelihood. 
+In addition, the test of phylogeny performed was bootstrapping with 500 replications.
+Finally, as the substitution model used was the Tamura-Nei substitution model \cite{tamura1993estimation}. 
+
+\subsection{Structural Analysis}\label{sec:structure}
+
+In order to find RNA secondary structure of BC200 and three of closest homologs of it, we used FORNA, a platform for drawing the secondary RNA structure \cite{kerpedjiev2015forna}. 
+We draw each homolog structure individually. 
+We also draw BC200. 
+First, we analyzed BC200 structure individually to get a better understanding of its function in body. 
+Knowing that BC200 structure consist of three main domains, we also look at its homologs from this view points. 
+Comparing each structure to BC200, we divided them to three main domains like BC200 structure and based on each part function we analyzed the structural differences.
 
 \section{Results}\label{sec:results}
 
@@ -168,7 +183,8 @@ While Hylobates lar is not a great ape, it is still part of the hominoidea super
 
 \subsection{Comparing BC200 sequence with its homologs}
 
-One of the best ways for finding the conserved portions of a gene during evolution, is sequence alignment. Here, we aligned BC200 and the three most related homologs with each other to find the conserved parts of the sequence.
+One of the best ways for finding the conserved portions of a gene during evolution, is sequence alignment. 
+Here, we aligned BC200 and the three most related homologs with each other to find the conserved parts of the sequence.
 
 Here are the alignment results:
 
@@ -190,7 +206,9 @@ Here are the alignment results:
   \caption{BC200 Sequence Alignment with BC200 in Gorilla}
 \end{figure}
 
-As it is obvious from the results, most parts of the sequence are conserved. Which shows that there should be a high similarity between BC200 RNA in human body and in other species. So, the following result does not support our hypothesis, and they suggest that Alzheimer’s can be shared between human and great apes.
+As it is obvious from the results, most parts of the sequence are conserved. 
+Which shows that there should be a high similarity between BC200 RNA in human body and in other species. 
+So, the following result does not support our hypothesis, and they suggest that Alzheimer’s can be shared between human and great apes.
 
 \section{Discussion}\label{sec:discussion}
 TODO
