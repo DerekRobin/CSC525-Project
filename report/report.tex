@@ -5,6 +5,8 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{caption}
 
 \begin{document}
 \input{commands.tex}
@@ -82,9 +84,32 @@ They demonstrate that BC200 is a potent positive regulator of BACE1 in AD cells 
 The lncRNA BC200 was selected for phylogenetic analysis due to the role it plays in AD as discussed in section \ref{sec:background}. 
 The homologs of BC200 were selected as a result of an NCBI Blast \cite{blastTool}. Specifically, Megablast \cite{morgulis2008database} with default parameters was used as it is able to compare closely related sequences \cite{amirmahani2018phylogenetic}. 
 From the Blast results, sequences which are known BC200 homologs as indicated by the inclusion of BC200 in their name were chosen. 
-Table \ref{tbl:accession} outlines the organism, sequence name, and accession number of each of the chosen sequences. 
+Table \ref{tbl:accession} outlines the sequence name including the organism and the accession number of each of the chosen sequences. 
 
+\begin{table*}[h]
+  \centering
+  \caption{Sequence information for BC200 and hominoidea homologs}
+  \label{tbl:accession}
+  \begin{tabular}{lc}
+    \toprule
+    Sequence Name & Accession Number \\
+    \midrule
+    Homo sapiens brain cytoplasmic RNA 1 (BCYRN1), long non-coding RNA & NR\_001568.1 \\
+    Pongo pygmaeus BC200 alpha scRNA gene, complete sequence           & AF067778.1 \\
+    Pan paniscus BC200 alpha scRNA gene, complete sequence             & AF067778.1 \\
+    Gorilla gorilla BC200 alpha scRNA gene, complete sequence          & AF067779.1 \\
+    Macaca mulatta BC200 alpha scRNA gene, complete sequence           & AF067784.1 \\
+    Hylobates lar BC200 alpha scRNA gene, complete sequence            & AF067781.1 \\
+    Papio hamadryas BC200 alpha scRNA gene, complete sequence          & AF067782.1 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
 
+\subsection{Phylogenetic Analysis}
+TODO
+
+\subsection{Structural Analysis}
+TODO
 
 \section{Results}\label{sec:results}
 
@@ -93,55 +118,72 @@ TODO
 
 \subsection{Structural difference between BC200 and its homologs}
 
-Brain cytoplasmic 200 long non-coding RNA (or BC200 lncRNA) is a 200 nucleotide RNA transcript that is found predominantly in the brain. It's primary function is regulating translation by inhibiting its initiation.
-It's role in AD is not fully understood, but research shows that Long noncoding RNA BC200 facilitates AD pathogenesis by upregulating AB through BACE1.Pathologically, AD is characterized by an imbalance in the production and clearance of amyloid-beta in the brain leading to plaque formation.\cite{li2018identification}
+Brain cytoplasmic 200 long non-coding RNA (or BC200 lncRNA) is a 200 nucleotide RNA transcript that is found predominantly in the brain. 
+It's primary function is regulating translation by inhibiting its initiation. 
+It's role in AD is not fully understood, but research shows that lncRNA BC200 facilitates AD pathogenesis by upregulating AB through BACE1. 
+Pathologically, AD is characterized by an imbalance in the production and clearance of amyloid-beta in the brain leading to plaque formation \cite{li2018identification}.
 The BC200 structure consist of three main parts: A-rich domain, Alu domain and unique domain \cite{jung2014rna}.
-\begin{figure}
+
+\begin{figure}[h]
   \centering
+  \label{fig:bc200-structure}
   \includegraphics[width=0.4\textwidth]{figs/rna-6.png}
   \caption{BC200 RNA Secondary Structure}
 \end{figure}
-As we can see from the RNA secondary structures, all of the homologs have a nearly simialr A-rich domain, but on the other hand the the Alu domain is different between the homologs and BC200. The Alu domain of the mammalian signal recognition particle (SRP) comprises the heterodimer of proteins SRP9 and SRP14 bound to the 5′ and 3′ terminal sequences of SRP RNA\cite{weichenrieder2000structure}. So, their function in brain should be very different with eachother, eventhough there may be high similarity between their sequences. Here we have the three most related homologs that are great apes and one homolog which is not a great ape, but since it was in the three most related homologs to BC200 based on phylogenetic tree, we investigate its structure as well.
 
-\begin{figure}
+As we can see from the RNA secondary structures, all of the homologs have a nearly simialr A-rich domain, but on the other hand the the Alu domain is different between the homologs and BC200. 
+The Alu domain of the mammalian signal recognition particle (SRP) comprises the heterodimer of proteins SRP9 and SRP14 bound to the 5′ and 3′ terminal sequences of SRP RNA \cite{weichenrieder2000structure}. 
+So, their function in brain should be very different from one another, even though there may be high similarity between their sequences. 
+Figures \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pango-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (hominidae). 
+Additionally, we have chosen to depict the RNA secondary structure of the Hylobates lar BC200 homolog in Figure \ref{fig:hylobates-structure}. 
+While Hylobates lar is not a great ape, it is still part of the hominoidea superfamily, and Phylogenetic analysis revealed that it was closely related to BC200.
+
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.4\textwidth]{figs/rnagorilla.png}
   \caption{BC200 RNA Secondary Structure in Gorilla}
+  \label{fig:gorilla-structure}
 \end{figure}
-\begin{figure}
+
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.4\textwidth]{figs/rnapan.png}
   \caption{BC200 RNA Secondary Structure in Pan}
+  \label{fig:pan-structure}
 \end{figure}
-\begin{figure}
+
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.4\textwidth]{figs/rnapango.png}
   \caption{BC200 RNA Secondary Structure in Pango}
+  \label{fig:pango-structure}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.4\textwidth]{rna.png}
+  \includegraphics[width=0.4\textwidth]{figs/rna.png}
   \caption{BC200 RNA Secondary Structure in Hylobates lar}
+  \label{fig:hylobates-structure}
 \end{figure}
-\subsection{Comparing BC200 sequence with its homologs}
-
 
 \subsection{Comparing BC200 sequence with its homologs}
 
 One of the best ways for finding the conserved portions of a gene during evolution, is sequence alignment. Here, we aligned BC200 and the three most related homologs with each other to find the conserved parts of the sequence.
 
 Here are the alignment results:
+
 \begin{figure}
   \centering
   \includegraphics[width=0.4\textwidth]{figs/TK1PBYHT114-Alignment-2-page-1.png}
   \caption{BC200 Sequence Alignment with BC200 in pan}
 \end{figure}
+
 \begin{figure}
   \centering
   \includegraphics[width=0.4\textwidth]{figs/TK1PBYHT114-Alignment-3-page-1.png}
   \caption{BC200 Sequence Alignment with BC200 in Pango}
 \end{figure}
+
 \begin{figure}
   \centering
   \includegraphics[width=0.4\textwidth]{figs/TK1PBYHT114-Alignment-page-1.png}
@@ -157,5 +199,5 @@ TODO
 TODO
 
 \bibliographystyle{IEEEtran}
-\bibliography{refs.bib}
+\bibliography{refs}
 \end{document}
