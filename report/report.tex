@@ -1,60 +1,64 @@
 \documentclass[conference]{IEEEtran}
+\usepackage{xcolor}
 \usepackage{cite}
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{parskip}
 
-\title{\vspace{-0.5cm}A Research Proposal for \\``Phylogenetic Analysis of lncRNAs Implicated in Alzheimer's Disease''}
+\begin{document}
+\input{commands.tex}
+\newlist{questions}{enumerate}{2}
+\setlist[questions,1]{label=RQ\arabic*.,ref=RQ\arabic*}
+\setlist[questions,2]{label=(\alph*),ref=\thequestionsi(\alph*)}
+
+\title{Phylogenetic and Structural Analysis of BC200 and Hominoidea Homologs}
 
 \author{Derek Robinson, Mina Emadi, Mazyar Ghezelji\\
 University of Victoria\\
 Victoria, Canada \\
 \{drobinson, minaemadi, mazyarghezelji\}@uvic.ca}
 
-\begin{document}
-\newlist{questions}{enumerate}{2}
-\setlist[questions,1]{label=RQ\arabic*.,ref=RQ\arabic*}
-\setlist[questions,2]{label=(\alph*),ref=\thequestionsi(\alph*)}
-
 \maketitle
 
 \section{Introduction}\label{sec:intro}
 
-There is no doubt that Alzheimer's disease (AD) greatly affects the lives of those diagnosed and those who care for the diagnosed. 
-In the United States, AD is currently the sixth leading cause of death for American adults \cite{AlzheimersDisease}. 
+Alzheimer's disease (AD) is a neurodegenerative disease which greatly affects the lives of those who are diagnosed and those who care for the diagnosed. 
+In the United States, 6.2 million patients are estimated to be living with AD and it is the sixth leading cause of death for American adults \cite{AlzheimersDisease}. 
 In Canada, over 747,000 patients are living with AD, or another form of dementia \cite{ADcanada}. 
-While many humans suffer from AD, it is not well understood if other great apes (Hominidae) also suffer from AD. 
-Finch and Austad argue that with our current understanding of AD, it is not possible to determine if AD is uniquely human \cite{finch2015commentary}.
-As a group, we are interested in learning more about AD; specifically, the phylogeny of the long non-coding RNAs (lncRNAs) which have been implicated in AD \cite{luo2016long}. 
-We have chosen to work on lncRNA as a majority of the human genome is transcribed into non-coding RNA sequences.
+Symptoms of AD range from memory loss and poor judgement in mild cases to the inability to communicate and seizures in severe cases \cite{alzheimersSigns}.
 
-Our main objective for this research project is to build the phylogenetic tree for one of the lncRNAs implicated in AD, as identified by Luo and Chen \cite{luo2016long}. 
-Our current target is brain cytoplasmic 200 (BC200) as we have already performed a preliminary BLAST search identifying several similar sequences to BC200 \cite{madden2012blast,blastTool}. 
-Our secondary goal for this research project is to compare the structure of our lncRNA's most closely related homologs to shine light on the possible differences that may lead to AD being uniquely human.
+AD involves multiple cell types and signaling pathways \cite{zhang2021role}, as such, the collective knowledge of AD is spread across many different domains. 
+This spread of knowledge means that fully understanding AD in humans is difficult, let alone understanding the disease in other species of the hominoidea superfamily.
+Finch and Austad argue that with our current understanding of AD, it is not possible to determine if AD is uniquely human \cite{finch2015commentary}. 
+As such, this paper explores one facet of AD pathogenesis, the long non-coding RNA (lncRNA) BC200. 
+BC200 has been implicated in AD as it upregulates the expression of b-site APP-cleaving enzyme1 (BACE1) \cite{li2018identification,zhang2021role}. 
+The upregulation of BACE1 in turn leads to higher levels of beta-amyloid (A$\beta$) in the brain, thus, disrupting cell function \cite{li2018identification,zhang2021role}. 
 
-Thus, our research questions are as follows:
+In hopes of better understanding how AD may affect other species in the hominoidea superfamily, specifically, the role that hominoidea homologs of BC200 play in AD, we answer the following research questions:
 
 \begin{questions}
-    \item What does the phylogenetic tree of BC200 look like?
-    \item What structural differences exist between BC200 and its two most closely related homologs?
+  \item What does the phylogenetic tree of BC200 look like?
+  \item What structural differences exist between BC200 and its four most closely related hominoidea homologs?
 \end{questions}
+
+The following paper is structured as follows: section \ref{sec:background} gives background into BC200 and the role it plays in AD, section \ref{sec:methods} lays out the methods used for selecting BC200 homologs and performing both the phylogenetic structural analysis, section \ref{sec:results} presents the results of our analysis, section \ref{sec:discussion} discusses the relevancy of the results, and section \ref{sec:conclusion} concludes the paper.
 
 \section{Background}\label{sec:background}
 
 \subsection{What is BC200?}
 
 Brain Cytoplasmic 200 lncRNA RNA (BC200) is a 200 nucleotide long RNA transcript which is found mostly in the brain \cite{tiedge1993primary}. 
-As a Non-coding RNA, BC200 is not translated into protein but can be used as a potential therapeutic target and biomarker due to its regulatory role in biological processes involved in disease development \cite{zhang2021role,mus2007dendritic}. 
-This lncRNA has recently been studied extensively because of its role in regulating translation and inhibiting its initiation, as well as its impacts in pathogenesis of Alzheimer's disease and cancer \cite{zhang2021role,tiedge1993primary}. 
-These non-coding RNAs are involved in translation control, thus they impact the synthesis of dendritic proteins which facilitates long-term plastic changes at the synapse \cite{mus2007dendritic}.
+As a non-coding RNA, BC200 is not translated into protein but can be used as a potential therapeutic target and biomarker due to its regulatory role in biological processes involved in disease development \cite{zhang2021role,mus2007dendritic}. 
+This lncRNA has recently been studied extensively because of its role in regulating translation and inhibiting its initiation, as well as its impacts in the pathogenesis of Alzheimer's disease and cancer \cite{zhang2021role,tiedge1993primary}. 
+These \derek{these being BC200?} non-coding RNAs are involved in translation control, thus, they impact the synthesis of dendritic proteins which facilitates long-term plastic changes at the synapse \cite{mus2007dendritic}.
 
 \subsection{The Relation Between AD and BC200}
 
-Alzheimer's disease (AD) is a Neurodegenerative disease resulting from synaptic plasticity failure in neurons \cite{mus2007dendritic}. 
+Alzheimer's disease (AD) is a neurodegenerative disease resulting from synaptic plasticity failure in neurons \cite{mus2007dendritic}. 
 It is a complex disease, meaning that it involves multiple cell types and signaling pathways \cite{zhang2021role}.
 
-AD occurs due to the accumulation of two proteins in the brain. 
+AD is thought to occur due to the accumulation of two proteins in the brain. 
 One of them is beta-amyloid (A$\beta$) which accumulates in neurons, forms plaques, and disrupts cell functions. 
 The other one is hyper-phosphorylated tau protein which in abnormal levels can form neurofibrillary tangles in neurons and block synaptic transmissions \cite{zhang2021role}.
 
@@ -67,18 +71,20 @@ The inhibition of BC200 significantly suppresses BACE1 expression, increases cel
 Many researches have demonstrated the important role of BC200 in AD. 
 El Mus \emph{et al.} \cite{mus2007dendritic} show that there are steady decline in BC200 level from age 49 to 86, but, in AD brain its level was substantially higher. 
 They also observe that BC200 expression is increased in brain areas that are involved in AD and it is parallel with severity of disease. 
-Huanyen Li \emph{et al.} \cite{li2018identification} establish an AD cell model overexpressing A$\beta$1- 42 to observe the effects of BC200 on the cell viability and apoptosis and to investigate the associated underlying mechanisms. 
+Huanyen Li \emph{et al.} \cite{li2018identification} establish an AD cell model overexpressing A$\beta$1-42 to observe the effects of BC200 on the cell viability and apoptosis and to investigate the associated underlying mechanisms. 
 They observe that BC200 and BACE1 were increased upon treatment with A$\beta$1-42, and inhibition of BC200 rescued this A$\beta$1-42-mediated dysfunction, as indicated by the interaction of BC200 directly targeting BACE1. 
 Moreover, inhibition of BC200 increased AD cell growth and reduced cells apoptosis. 
-They demonstrate that BC200 is a potent positive regulator of BACE1 in AD cells and in conclusion, lncRNA BC200 facilitates AD pathogenesis by up-regulating Aβ through BACE1.  					 			 		 	 
+They demonstrate that BC200 is a potent positive regulator of BACE1 in AD cells and in conclusion, lncRNA BC200 facilitates AD pathogenesis by up-regulating A$\beta$ through BACE1.  					 			 		 	 
 
 \section{Materials and Methods}\label{sec:methods}
 
-The methods we will be applying are those similar to Amirmahani and Goharrizi \cite{amirmahani2018phylogenetic}. 
-Specifically, we will be using the bioinformatics program NCBI-BLAST in order to identify homologs of our chosen lncRNA \cite{madden2012blast,blastTool}. 
-Once we have identified several homologs of our chosen lncRNA, we will then perform the phylogenetic analysis using MEGA11 \cite{tamura2021mega11}. 
-Our phylogenetic tree will be created via all available tree construction algorithms (Maximum Likelihood, Neighbour Joining, and Minimum-Evolution), and each of the results will be compared. 
-Once we have built the phylogenetic tree, we will then compare the secondary structure of the three most closely related homologs using RNAz 2.0 \cite{gruber2010rnaz}.
+\subsection{Selection of lncRNAs}
+The lncRNA BC200 was selected for phylogenetic analysis due to the role it plays in AD as discussed in section \ref{sec:background}. 
+The homologs of BC200 were selected as a result of an NCBI Blast \cite{blastTool}. Specifically, Megablast \cite{morgulis2008database} with default parameters was used as it is able to compare closely related sequences \cite{amirmahani2018phylogenetic}. 
+From the Blast results, sequences which are known BC200 homologs as indicated by the inclusion of BC200 in their name were chosen. 
+Table \ref{tbl:accession} outlines the organism, sequence name, and accession number of each of the chosen sequences. 
+
+
 
 \section{Results}\label{sec:results}
 
