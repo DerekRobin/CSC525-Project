@@ -98,7 +98,7 @@ Table \ref{tbl:accession} outlines the sequence name including the organism and 
     Organism Name & Sequence Accession Number \\
     \midrule
     Homo sapiens    & NR\_001568.1 \\
-    Pongo pygmaeus  & AF067778.1 \\
+    Pongo pygmaeus  & AF067780.1 \\
     Pan paniscus    & AF067778.1 \\
     Gorilla gorilla & AF067779.1 \\
     Macaca mulatta  & AF067784.1 \\
@@ -111,11 +111,18 @@ Table \ref{tbl:accession} outlines the sequence name including the organism and 
 \subsection{Phylogenetic Analysis}\label{sec:phylo}
 
 The lncRNA sequences chosen in table \ref{tbl:accession} were used to build the phylogenetic tree. 
-The phylogenetic tree was built with the Mega11 \cite{tamura2021mega11} bioinformatics software. 
-The parameters of the analysis were kept to their default values. 
+The phylogenetic tree was built with the MEGA11 \cite{tamura2021mega11} bioinformatics software. 
+First the sequences outline in table \ref{tbl:accession} were aligned using the Mega11 alignment module. 
+The multiple sequence alignment was performed using the MUSCLE algorithm with default parameters. 
+Once the multiple sequence alignment had been performed in MEGA11, it was then possible to build the phylogenetic tree. 
+The parameters of the phylogenetic analysis were also kept to their default values. 
 Namely, the statistical method used was maximum likelihood. 
 In addition, the test of phylogeny performed was bootstrapping with 500 replications.
 Finally, as the substitution model used was the Tamura-Nei substitution model \cite{tamura1993estimation}. 
+
+In order to further support the phylogenetic tree, estimates of evolutionary divergence were also calculated by MEGA11 \cite{tamura2021mega11}. 
+Analyses were conducted using the Maximum Composite Likelihood model \cite{tamura2004prospects}. 
+All ambiguous positions were removed for each sequence pair (pairwise deletion option). 
 
 \subsection{Structural Analysis}\label{sec:structure}
 
@@ -129,7 +136,39 @@ Comparing each structure to BC200, we divided them to three main domains like BC
 \section{Results}\label{sec:results}
 
 \subsection{Phylogenetic Tree of BC200}
-TODO
+The results of the phylogenetic analysis can be found in figure \ref{fig:phylo-tree}. 
+The tree shows that the Homo sapiens BC200 lncRNA and the Gorilla gorilla BC200 lncRNA are likely to share a common ancestor. 
+Similarly, the BC200 homologs from Pan paniscus and Hylobates lar are likely to share a common ancestor. 
+This is also the case for the BC200 homologs from Macaca mulatta, Papio hamadryas, Pongo pygmaeus. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.485\textwidth]{figs/phylogenetic-tree.jpg}
+  \caption{Phylogenetic tree of BC200 and hominoidea homologs. The numbers at each node are the bootstrap support values obtained by maximum likelihood.}
+  \label{fig:phylo-tree}
+\end{figure}
+
+Additionally, table \ref{tbl:distances} shows the pairwise distances between sequences which estimate the evolutionary divergence between sequences. 
+The evolutionary divergence estimates show that the four most closely related homologs of BC200 found in other hominoidea come from Pan paniscus (AF067778.1), Pongo pygmaeus (AF067780.1), Hylobates lar (AF067781.1), and Gorilla gorilla (AF067779.1). 
+
+\begin{table*}[h]
+  \centering
+  \caption{Estimates of Evolutionary Divergence between Sequences}
+  \label{tbl:distances}
+  \begin{tabular}{lcccccc}
+    \toprule
+    Accession Number \\
+    \midrule
+    NR\_001568.1 \\
+    AF067780.1   & 0.01023 \\
+    AF067778.1   & 0.00503 & 0.02169 \\
+    AF067779.1   & 0.03070 & 0.02890 & 0.01709 \\ 
+    AF067784.1   & 0.03088 & 0.04573 & 0.03802 & 0.05235 \\
+    AF067781.1   & 0.02561 & 0.02763 & 0.01562 & 0.02439 & 0.04353 \\ 
+    AF067782.1   & 0.03120 & 0.04478 & 0.03947 & 0.04731 & 0.00852 & 0.04259 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
 
 \subsection{Structural difference between BC200 and its homologs}
 
@@ -141,9 +180,9 @@ The BC200 structure consist of three main parts: A-rich domain, Alu domain and u
 
 \begin{figure}[h]
   \centering
-  \label{fig:bc200-structure}
   \includegraphics[width=0.4\textwidth]{figs/rna-6.png}
   \caption{BC200 RNA Secondary Structure}
+  \label{fig:bc200-structure}
 \end{figure}
 
 As we can see from the RNA secondary structures, all of the homologs have a nearly simialr A-rich domain, but on the other hand the the Alu domain is different between the homologs and BC200. 
