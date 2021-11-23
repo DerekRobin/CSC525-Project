@@ -6,7 +6,9 @@
 \usepackage{enumitem}
 \usepackage{parskip}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{caption}
+\usepackage{subcaption}
 
 \begin{document}
 \input{commands.tex}
@@ -73,7 +75,7 @@ The inhibition of BC200 significantly suppresses BACE1 expression, increases cel
 Many researches have demonstrated the important role of BC200 in AD. 
 El Mus \emph{et al.} \cite{mus2007dendritic} show that there are steady decline in BC200 level from age 49 to 86, but, in AD brain its level was substantially higher. 
 They also observe that BC200 expression is increased in brain areas that are involved in AD and it is parallel with severity of disease. 
-Huanyen Li \emph{et al.} \cite{li2018identification} establish an AD cell model overexpressing A$\beta$1-42 to observe the effects of BC200 on the cell viability and apoptosis and to investigate the associated underlying mechanisms. 
+Huanyen Li \emph{et al.} \cite{li2018identification} establish an AD cell model over expressing A$\beta$1-42 to observe the effects of BC200 on the cell viability and apoptosis and to investigate the associated underlying mechanisms. 
 They observe that BC200 and BACE1 were increased upon treatment with A$\beta$1-42, and inhibition of BC200 rescued this A$\beta$1-42-mediated dysfunction, as indicated by the interaction of BC200 directly targeting BACE1. 
 Moreover, inhibition of BC200 increased AD cell growth and reduced cells apoptosis. 
 They demonstrate that BC200 is a potent positive regulator of BACE1 in AD cells and in conclusion, lncRNA BC200 facilitates AD pathogenesis by up-regulating A$\beta$ through BACE1.  					 			 		 	 
@@ -89,7 +91,7 @@ Two of the top hits in the Blast results were complete bacterial artificial chro
 Inclusion of these two sequences (accession numbers: AC185986.3, AC183594.3) caused errors in the analysis software described in section \ref{sec:phylo} and section \ref{sec:structure}. 
 Table \ref{tbl:accession} outlines the sequence name including the organism and the accession number of each of the chosen sequences. 
 
-\begin{table}[h]
+\begin{table}[ht]
   \centering
   \caption{lncRNA Sequence Information}
   \label{tbl:accession}
@@ -152,7 +154,7 @@ We used Clustal Omega for aligning the sequences \cite{madeira2019embl}.
 The CLUSTAL format includes a plain-text key to annotate conserved columns of the alignment, denoting conserved sequence (*), conservative mutations (:), semi-conservative mutations (.), and non-conservative mutations ( ). 
 The output format is in ClustalW, and the guide tree is shown below.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \label{fig:Guide-tree}
   \includegraphics[width=0.4\textwidth]{figs/guidetree.png}
@@ -167,7 +169,7 @@ The tree shows that the Homo sapiens BC200 lncRNA and the Gorilla gorilla BC200 
 Similarly, the BC200 homologs from Pan paniscus and Hylobates lar are likely to share a common ancestor. 
 This is also the case for the BC200 homologs from Macaca mulatta, Papio hamadryas, Pongo pygmaeus. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.485\textwidth]{figs/phylogenetic-tree.jpg}
   \caption{Phylogenetic tree of BC200 and hominoidea homologs. The numbers at each node are the bootstrap support values obtained by maximum likelihood.}
@@ -186,12 +188,12 @@ The evolutionary divergence estimates show that the four most closely related ho
     Accession Number \\
     \midrule
     NR\_001568.1 \\
-    AF067780.1   & 0.01023 \\
-    AF067778.1   & 0.00503 & 0.02169 \\
-    AF067779.1   & 0.03070 & 0.02890 & 0.01709 \\ 
-    AF067784.1   & 0.03088 & 0.04573 & 0.03802 & 0.05235 \\
-    AF067781.1   & 0.02561 & 0.02763 & 0.01562 & 0.02439 & 0.04353 \\ 
-    AF067782.1   & 0.03120 & 0.04478 & 0.03947 & 0.04731 & 0.00852 & 0.04259 \\
+    AF067780.1 & 0.01023 \\
+    AF067778.1 & 0.00503 & 0.02169 \\
+    AF067779.1 & 0.03070 & 0.02890 & 0.01709 \\ 
+    AF067784.1 & 0.03088 & 0.04573 & 0.03802 & 0.05235 \\
+    AF067781.1 & 0.02561 & 0.02763 & 0.01562 & 0.02439 & 0.04353 \\ 
+    AF067782.1 & 0.03120 & 0.04478 & 0.03947 & 0.04731 & 0.00852 & 0.04259 \\
     \bottomrule
   \end{tabular}
 \end{table*}
@@ -211,41 +213,45 @@ The BC200 structure consist of three main parts: A-rich domain, Alu domain and u
   \label{fig:bc200-structure}
 \end{figure}
 
-Finding the Alu domain of BC200 and its homologs( supplementary info), we concluded that the Alu domain between human BC200 and its Select seq Pan paniscus homolog are compeletly the same. There are slight differences between human BC200 and its Pongo pygmaeus homolog. On the other hand the alu domain between human BC200 and its gorilla gorilla and Hylobates lar have strong differences.
+Finding the Alu domain of BC200 and its homologs( supplementary info), we concluded that the Alu domain between human BC200 and its Select seq Pan paniscus homolog are completely the same. There are slight differences between human BC200 and its Pongo pygmaeus homolog. On the other hand the alu domain between human BC200 and its gorilla gorilla and Hylobates lar have strong differences.
 The Alu domain of the mammalian signal recognition particle (SRP) comprises the heterodimer of proteins SRP9 and SRP14 bound to the 5′ and 3′ terminal sequences of SRP RNA \cite{weichenrieder2000structure}. 
 So, their function in brain may be different from one another, even though there may be high similarity between their sequences. 
-Figures \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pango-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (hominidae). 
+Figures \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pongo-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (hominidae). 
 Additionally, we have chosen to depict the RNA secondary structure of the Hylobates lar BC200 homolog in Figure \ref{fig:hylobates-structure}. 
 While Hylobates lar is not a great ape, it is still part of the hominoidea superfamily, and Phylogenetic analysis revealed that it was closely related to BC200.
 
-\begin{figure}[h]
+\begin{figure*}[h]
   \centering
-  \includegraphics[width=0.4\textwidth]{figs/rnagorilla.png}
-  \caption{BC200 RNA Secondary Structure in Gorilla}
-  \label{fig:gorilla-structure}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/rnapan.png}
-  \caption{BC200 RNA Secondary Structure in Pan}
-  \label{fig:pan-structure}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/rnapango.png}
-  \caption{BC200 RNA Secondary Structure in Pango}
-  \label{fig:pango-structure}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/rnahylobates.png}
-  \caption{BC200 RNA Secondary Structure in Hylobates lar}
-  \label{fig:hylobates-structure}
-\end{figure}
-
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figs/rnagorilla.png}
+    \caption{BC200 RNA Secondary Structure in Gorilla gorilla}
+    \label{fig:gorilla-structure}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}  
+    \centering
+    \includegraphics[width=\textwidth]{figs/rnapan.png}
+    \caption{BC200 RNA Secondary Structure in Pan paniscus}
+    \label{fig:pan-structure}
+  \end{subfigure}
+  \vskip\baselineskip
+  \begin{subfigure}[b]{0.4\textwidth}   
+    \centering
+    \includegraphics[width=\textwidth]{figs/rnapongo.png}
+    \caption{BC200 RNA Secondary Structure in pongo pygmaeus}
+    \label{fig:pongo-structure}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}   
+    \centering
+    \includegraphics[width=\textwidth]{figs/rnahylobates.png}
+    \caption{BC200 RNA Secondary Structure in Hylobates lar}
+    \label{fig:hylobates-structure}
+  \end{subfigure}
+  \caption{RNA Secondary Structures of Hominoidea BC200 Homologs, generated by FORNA \cite{kerpedjiev2015forna} using default parameters}
+  \label{fig:rna-sec-structure}
+\end{figure*}
 
 \subsection{Finding Conserved Parts of the Sequence}
 
@@ -272,5 +278,5 @@ TODO
 TODO
 
 \bibliographystyle{IEEEtran}
-\bibliography{refs}
+\bibliography{refs.bib}
 \end{document}
