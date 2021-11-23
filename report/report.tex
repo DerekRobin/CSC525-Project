@@ -133,6 +133,22 @@ First, we analyzed BC200 structure individually to get a better understanding of
 Knowing that BC200 structure consist of three main domains, we also look at its homologs from this view points. 
 Comparing each structure to BC200, we divided them to three main domains like BC200 structure and based on each part function we analyzed the structural differences.
 
+\subsection{Finding Alu Domains}
+
+Alu elements are elements of DNA that can excise and then re-introduced into the genome. They called retrotransposons, also they are very common in human and primate genomes\cite{dombroski1994vivo}. In order to find them, we used Dfam website(https://www.dfam.org/). The Dfam database is a open collection of Transposable Element DNA sequence alignments, hidden Markov Models (HMMs), consensus sequences, and genome annotations. By using the sequence search we find the alu domains of the BC200 and its homologs. Comparing the alu domain structure gives us a suitable result for the RNA function.
+
+\subsection{Finding Conserved Parts of BC200}
+Over many generations,random mutations and deletions can change nucleic acid sequences in the genome of an evolutionary lineage. Chromosomal rearrangement may also recombine or delete sequences. Conserved sequences are sequences which persist in the genome despite such forces, and have slower rates of mutation than the background mutation rate\cite{kimura1974some}.
+One of the best ways for visualise conserved sequences during evolution, is multiple sequence alignment. Here, we aligned BC200 and the four most related homologs with each other to find the conserved parts of the sequence. We used Clustal omega for aligning the sequences. The CLUSTAL format includes a plain-text key to annotate conserved columns of the alignment, denoting conserved sequence (*), conservative mutations (:), semi-conservative mutations (.), and non-conservative mutations ( ).The output format is in ClustalW, and the guide tree is shown below.
+
+
+\begin{figure}[h]
+  \centering
+  \label{fig:Guide-tree}
+  \includegraphics[width=0.4\textwidth]{figs/guidetree.png}
+  \caption{Multipile Sequence Alignment Guide Tree}
+\end{figure}
+
 \section{Results}\label{sec:results}
 
 \subsection{Phylogenetic Tree of BC200}
@@ -185,9 +201,9 @@ The BC200 structure consist of three main parts: A-rich domain, Alu domain and u
   \label{fig:bc200-structure}
 \end{figure}
 
-As we can see from the RNA secondary structures, all of the homologs have a nearly simialr A-rich domain, but on the other hand the the Alu domain is different between the homologs and BC200. 
+Finding the Alu domain of BC200 and its homologs( supplementary info), we concluded that the Alu domain between human BC200 and its Select seq Pan paniscus homolog are compeletly the same. There are slight differences between human BC200 and its Pongo pygmaeus homolog. On the other hand the alu domain between human BC200 and its gorilla gorilla and Hylobates lar have strong differences.
 The Alu domain of the mammalian signal recognition particle (SRP) comprises the heterodimer of proteins SRP9 and SRP14 bound to the 5′ and 3′ terminal sequences of SRP RNA \cite{weichenrieder2000structure}. 
-So, their function in brain should be very different from one another, even though there may be high similarity between their sequences. 
+So, their function in brain may be different from one another, even though there may be high similarity between their sequences. 
 Figures \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pango-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (hominidae). 
 Additionally, we have chosen to depict the RNA secondary structure of the Hylobates lar BC200 homolog in Figure \ref{fig:hylobates-structure}. 
 While Hylobates lar is not a great ape, it is still part of the hominoidea superfamily, and Phylogenetic analysis revealed that it was closely related to BC200.
@@ -220,34 +236,21 @@ While Hylobates lar is not a great ape, it is still part of the hominoidea super
   \label{fig:hylobates-structure}
 \end{figure}
 
-\subsection{Comparing BC200 sequence with its homologs}
 
-One of the best ways for finding the conserved portions of a gene during evolution, is sequence alignment. 
-Here, we aligned BC200 and the three most related homologs with each other to find the conserved parts of the sequence.
+\subsection{Finding Conserved Parts of the Sequence}
 
-Here are the alignment results:
+Using multipile sequence alignmment we aligned BC200 with its four mostly related homolgs to find the conserved parts of the sequence.
+Here is the alignment result:
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.4\textwidth]{figs/TK1PBYHT114-Alignment-2-page-1.png}
-  \caption{BC200 Sequence Alignment with BC200 in pan}
+  \includegraphics[width=0.4\textwidth]{figs/alginment.png}
+  \caption{BC200 and it's homologs ClustalW alignment Result}
+  \label{fig:alignment result}
 \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/TK1PBYHT114-Alignment-3-page-1.png}
-  \caption{BC200 Sequence Alignment with BC200 in Pango}
-\end{figure}
+It can be concluded from the results, most parts of the BC200 sequence are conserved. Non-coding sequences important for gene regulation, such as the binding or recognition sites of ribosomes and transcription factors. However, sequence conservation in non-coding RNAs is generally poor compared to protein-coding sequences, and base pairs that contribute to structure or function are often conserved instead\cite{johnsson2014evolutionary}. So, the result shows that there should be a high similarity between BC200 RNA function in human body and in other species. So, the following result does not support our hypothesis, and they suggest that Alzheimer’s can be shared between human and great apes.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/TK1PBYHT114-Alignment-page-1.png}
-  \caption{BC200 Sequence Alignment with BC200 in Gorilla}
-\end{figure}
-
-As it is obvious from the results, most parts of the sequence are conserved. 
-Which shows that there should be a high similarity between BC200 RNA in human body and in other species. 
-So, the following result does not support our hypothesis, and they suggest that Alzheimer’s can be shared between human and great apes.
 
 \section{Discussion}\label{sec:discussion}
 TODO
