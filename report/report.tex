@@ -88,7 +88,7 @@ The homologs of BC200 were selected as a result of an NCBI Blast \cite{blastTool
 Specifically, Megablast \cite{morgulis2008database} with default parameters was used as it is able to compare closely related sequences \cite{amirmahani2018phylogenetic}. 
 From the Blast results, the top six sequences which are known BC200 homologs as indicated by the inclusion of BC200 in their name were chosen. 
 Two of the top hits in the Blast results were complete bacterial artificial chromosome sequences for pan troglodytes. 
-Inclusion of these two sequences (accession numbers: AC185986.3, AC183594.3) caused errors in the analysis software described in section \ref{sec:phylo} and section \ref{sec:structure}. 
+Inclusion of these two sequences (accession numbers: AC185986.3, AC183594.3) caused errors in the analysis software described in section \ref{sec:phylo} and section \ref{sec:structure}, as such we did not consider these full chromosome sequences in our analysis. 
 Table \ref{tbl:accession} outlines the sequence name including the organism and the accession number of each of the chosen sequences. 
 
 \begin{table}[ht]
@@ -112,28 +112,27 @@ Table \ref{tbl:accession} outlines the sequence name including the organism and 
 
 \subsection{Phylogenetic Analysis}\label{sec:phylo}
 
-The lncRNA sequences chosen in table \ref{tbl:accession} were used to build the phylogenetic tree. 
+The lncRNA sequences in table \ref{tbl:accession} were subject to phylogenetic analysis.
 The phylogenetic tree was built with the MEGA11 \cite{tamura2021mega11} bioinformatics software. 
-First the sequences outline in table \ref{tbl:accession} were aligned using the Mega11 alignment module. 
+First the sequences outlined in table \ref{tbl:accession} were aligned using the MEGA11 alignment module. 
 The multiple sequence alignment was performed using the MUSCLE algorithm with default parameters. 
 Once the multiple sequence alignment had been performed in MEGA11, it was then possible to build the phylogenetic tree. 
-The parameters of the phylogenetic analysis were also kept to their default values. 
-Namely, the statistical method used was maximum likelihood. 
-In addition, the test of phylogeny performed was bootstrapping with 500 replications.
-Finally, as the substitution model used was the Tamura-Nei substitution model \cite{tamura1993estimation}. 
 
+The phylogenetic tree was built using the maximum likelihood statistical method and Tamura-Nei substitution model \cite{tamura1993estimation, tamura2004prospects}. 
+The bootstrap method was used as a test of phylogeny with 500 replications.
 In order to further support the phylogenetic tree, estimates of evolutionary divergence were also calculated by MEGA11 \cite{tamura2021mega11}. 
-Analyses were conducted using the Maximum Composite Likelihood model \cite{tamura2004prospects}. 
+Analyses were conducted using Maximum Composite Likelihood and the Tamura-Nei model \cite{tamura1993estimation, tamura2004prospects}. 
 All ambiguous positions were removed for each sequence pair (pairwise deletion option). 
 
 \subsection{Structural Analysis}\label{sec:structure}
 
 In order to find RNA secondary structure of BC200 and three of closest homologs of it, we used FORNA, a platform for drawing the secondary RNA structure \cite{kerpedjiev2015forna}. 
-We draw each homolog structure individually. 
-We also draw BC200. 
-First, we analyzed BC200 structure individually to get a better understanding of its function in body. 
-Knowing that BC200 structure consist of three main domains, we also look at its homologs from this view points. 
-Comparing each structure to BC200, we divided them to three main domains like BC200 structure and based on each part function we analyzed the structural differences.
+FORNA is able to draw the RNA secondary structure from the dot bracket notation provided by the user or from the minimum free energy (MFE) structure as calculated by RNAFold \cite{lorenz2011viennarna}. 
+As this analysis aims at computationally determining a secondary structure, the latter option of using the MFE structure was employed. 
+Each of the five structures present in section \ref{sec:results-structure} was drawn individually. 
+First, we analyzed BC200 structure to get a better understanding of its function in body. 
+Knowing that BC200 structure consist of three main domains, we also look at its homologs from this view point. 
+Comparing each homolog structure to BC200, we divided them to three main domains like BC200 structure and based on each part function we analyzed the structural differences.
 
 \subsection{Finding Alu Domains}
 
@@ -198,7 +197,7 @@ The evolutionary divergence estimates show that the four most closely related ho
   \end{tabular}
 \end{table*}
 
-\subsection{Structural difference between BC200 and its homologs}
+\subsection{Structural difference between BC200 and its homologs}\label{sec:results-structure}
 
 Brain cytoplasmic 200 long non-coding RNA (or BC200 lncRNA) is a 200 nucleotide RNA transcript that is found predominantly in the brain. 
 It's primary function is regulating translation by inhibiting its initiation. 
@@ -258,12 +257,12 @@ While Hylobates lar is not a great ape, it is still part of the hominoidea super
 Using multiple sequence alignment we aligned BC200 with its four mostly related homologs to find the conserved parts of the sequence.
 Here is the alignment result:
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/alignment.png}
-  \caption{BC200 and it's homologs ClustalW alignment Result}
-  \label{fig:alignment result}
-\end{figure}
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.4\textwidth]{figs/alignment.png}
+%  \caption{BC200 and it's homologs ClustalW alignment Result}
+%  \label{fig:alignment result}
+%\end{figure}
 
 It can be concluded from the results, most parts of the BC200 sequence are conserved. 
 Non-coding sequences important for gene regulation, such as the binding or recognition sites of ribosomes and transcription factors. 
