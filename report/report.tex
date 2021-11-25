@@ -26,13 +26,13 @@ Victoria, Canada \\
 \maketitle
 
 \begin{abstract}
-Alzheimer’s disease (AD) is a neurodegenerative disorder, resulting from synaptic plasticity failure in neurons, which greatly affects memory and thinking skills of patients.
-This disease involves multiple cell types and signalling pathways which makes it complex and difficult to analyze, but understanding it is the main step towards diagnosing and preventing AD.
-There are some previous studies suggesting that AD is uniquely human disease, but as there are some similarities between Homo sapiens and other species of the hominidae superfamily, we try to answer the question of ``is there any possibility that other species have AD''?
-In order to answer this question we first identify the causes of AD; accumulation of beta-amyloid protein and tau protein. Abnormal levels of both these proteins can disrupt cell functions and eventually cause diseases such as AD. 
-We break down our problem to two crucial parts; performing phylogenetic analysis of BC200 and investigating the structural differences between BC200 and its four most closely related hominoidea homologs.
-We start by the most related sequences to BC200 by multiple sequence alignment, then building phylogenetic tree of the sequences so that we can determine which homologs are closely related.
-Observing the most similar sequences and building their secondary structure, which then can be used to to compare functions of BC200 and its homologs. 
+Alzheimer’s disease (AD) is a neurodegenerative disorder, resulting from synaptic plasticity failure in neurons, which greatly affects the cognitive ability of patients. 
+AD is thought to be caused by the accumulation of beta-amyloid protein and tau protein. Abnormal levels of both these proteins can disrupt cell functions and eventually cause diseases such as AD. 
+Previous studies have suggested that AD is a uniquely human disease. 
+In this paper, we investigate this claim by analyzing genetic similarities between humans and other species of the Hominoidea superfamily.
+We break down our problem to two crucial parts; performing phylogenetic analysis of a long non-coding RNA associated with AD named Brain Cytoplasmic 200 lncRNA (BC200) and investigating the structural differences between BC200 and its four most closely related hominoidea homologs. 
+We start by first performing a Blast search to determine similar sequences, followed by building phylogenetic tree of the sequences so that we can determine which homologs are closely related.
+We then observe the most similar sequences and build their secondary structure, which then can be used to to compare functions of BC200 and its homologs.
 Although we found some similarities between these sequences, these comparisons reveal some structural differences between human BC200 and its homologs which means that their functions in body may be different.
 As a result, our research supports the hypothesis that AD is uniquely human.
 
@@ -45,34 +45,34 @@ In the United States, 6.2 million patients are estimated to be living with AD an
 In Canada, over 747,000 patients are living with AD, or another form of dementia \cite{ADcanada}. 
 Symptoms of AD range from memory loss and poor judgement in mild cases to the inability to communicate and seizures in severe cases \cite{alzheimersSigns}.
 
-AD involves multiple cell types and signaling pathways \cite{zhang2021role}, as such, the collective knowledge of AD is spread across many different domains. 
-This spread of knowledge means that fully understanding AD in humans is difficult, let alone understanding the disease in other species of the hominoidea superfamily.
+AD involves multiple cell types and signaling pathways \cite{zhang2021role}. As such, the collective knowledge of AD is spread across many different domains. 
+This spread of knowledge means that fully understanding AD in humans is difficult, let alone attempting to understand if the disease effects other species of the hominoidea superfamily.
 Finch and Austad argue that with our current understanding of AD, it is not possible to determine if AD is uniquely human \cite{finch2015commentary}. 
-As such, this paper explores one facet of AD pathogenesis, the long non-coding RNA (lncRNA) BC200. 
+Thus, this paper explores one facet of AD pathogenesis, the long non-coding RNA (lncRNA) BC200. 
 BC200 has been implicated in AD as it upregulates the expression of b-site APP-cleaving enzyme1 (BACE1) \cite{li2018identification,zhang2021role}. 
 The upregulation of BACE1 in turn leads to higher levels of beta-amyloid (A$\beta$) in the brain, thus, disrupting cell function \cite{li2018identification,zhang2021role}. 
 
-In hopes of better understanding how AD may affect other species in the hominoidea superfamily, specifically, the role that hominoidea homologs of BC200 play in AD, we answer the following research questions:
+In hopes of better understanding the role that hominoidea homologs of BC200 play in AD, we answer the following research questions:
 
 \begin{questions}
   \item What does the phylogenetic tree of BC200 look like?
   \item What structural differences exist between BC200 and its four most closely related hominoidea homologs?
 \end{questions}
 
-The following paper is structured as follows: section \ref{sec:background} gives background into BC200 and the role it plays in AD, section \ref{sec:methods} lays out the methods used for selecting BC200 homologs and performing both the phylogenetic structural analysis, section \ref{sec:results} presents the results of our analysis, section \ref{sec:discussion} discusses the relevancy of the results, and section \ref{sec:conclusion} concludes the paper.
+The remainder of this paper is structured as follows: section \ref{sec:background} gives background into BC200 and the role it plays in AD, section \ref{sec:methods} lays out the methods used for selecting BC200 homologs and performing both the phylogenetic structural analysis, section \ref{sec:results} presents the results of our analysis, section \ref{sec:discussion} discusses the relevancy of the results, and section \ref{sec:conclusion} concludes the paper.
 
 \section{Background}\label{sec:background}
 
 \subsection{What is BC200?}
 
-Brain Cytoplasmic 200 lncRNA (BC200), sometimes referred to as BCYRN1, is a 200 nucleotide long RNA transcript which is found mostly in the brain \cite{tiedge1993primary}. 
+BC200, sometimes referred to as BCYRN1, is a 200 nucleotide long RNA transcript which is found mostly in the brain \cite{tiedge1993primary}. 
 As a non-coding RNA, BC200 is not translated into protein but can be used as a potential therapeutic target and biomarker due to its regulatory role in biological processes involved in disease development \cite{zhang2021role,mus2007dendritic}. 
 This lncRNA has recently been studied extensively because of its role in regulating translation and inhibiting its initiation, as well as its impacts in the pathogenesis of Alzheimer's disease and cancer \cite{zhang2021role,tiedge1993primary}. 
 Because of the crucial role of BC200 in translation control, it impacts the synthesis of dendritic proteins which facilitates long-term plastic changes at the synapse \cite{mus2007dendritic}.
 
 \subsection{The Relation Between AD and BC200}
 
-Alzheimer's disease (AD) is a neurodegenerative disease resulting from synaptic plasticity failure in neurons \cite{mus2007dendritic}. 
+AD is a neurodegenerative disease resulting from synaptic plasticity failure in neurons \cite{mus2007dendritic}. 
 It is a complex disease, meaning that it involves multiple cell types and signaling pathways \cite{zhang2021role}.
 
 AD is thought to occur due to the accumulation of two proteins in the brain. 
@@ -139,7 +139,7 @@ All ambiguous positions were removed for each sequence pair (pairwise deletion o
 
 \subsection{Structural Analysis}\label{sec:structure}
 
-In order to find RNA secondary structure of BC200 and three of closest homologs of it, we used FORNA, a platform for drawing the secondary RNA structure \cite{kerpedjiev2015forna}. 
+In order to find RNA secondary structure of BC200 and four of closest homologs of it, we used FORNA, a platform for drawing the secondary RNA structure \cite{kerpedjiev2015forna}. 
 FORNA is able to draw the RNA secondary structure from the dot bracket notation provided by the user or from the minimum free energy (MFE) structure as calculated by RNAFold \cite{lorenz2011viennarna}. 
 As this analysis aims at computationally determining a secondary structure, the latter option of using the MFE structure was employed. 
 Each of the five structures present in section \ref{sec:results-structure} was drawn individually. 
@@ -311,7 +311,9 @@ It was shown that the expression of the BC200 lncRNA, which is a translational r
 
 Here we showed that several hominoidea homologs of BC200 share evolutionary ancestors as shown in figure \ref{fig:phylo-tree}. 
 Additionally, we have shown that the four most closely related hominoidea homologs of Homo Sapiens BC200 have differing RNA secondary structures and that they may act differently amongst each host organism. 
+
 On the other hand, there are many papers suggest that presence of beta-amyloid can be the cause of Alzheimer disease, we cannot be certain that it is the real cause. 
+
 There are biological evidence that contradict this hypothesis \cite{selkoe2016amyloid}. 
 As mentioned above, overexpression of BC200 will increase expression of BACE1, which in turn generates beta-amyloid. 
 Although there is high similarity between BC200 lncRNA in Homo sapiens and in Pan paniscus and Pongo pygmaeus, this does not definitively answer the questions of whether or not AD is uniquely human. 
