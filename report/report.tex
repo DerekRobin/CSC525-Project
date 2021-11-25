@@ -34,7 +34,7 @@ We break down our problem to two crucial parts; performing phylogenetic analysis
 We start by first performing a Blast search to determine similar sequences, followed by building phylogenetic tree of the sequences so that we can determine which homologs are closely related.
 We then observe the most similar sequences and build their secondary structure, which then can be used to to compare functions of BC200 and its homologs.
 Although we found some similarities between these sequences, these comparisons reveal some structural differences between human BC200 and its homologs which means that their functions in body may be different.
-As a result, our research supports the hypothesis that AD is uniquely human.
+As a result, our findings neither support nor refute that AD is a uniquely human disease.
 
 \end{abstract}
 
@@ -149,14 +149,15 @@ Comparing each homolog structure to BC200, we divided them to three main domains
 
 \subsection{Finding Alu Domains}
 
-Alu elements are elements of DNA that can excise and then get re-introduced into the genome. 
-They called retrotransposons, also they are very common in human and primate genomes \cite{dombroski1994vivo}. 
-In order to find them, we used Dfam website (https://www.dfam.org/). 
+Alu domains (or elements) are sections of RNA which are responsible for for the regulation of tissue-specific genes. Additionally, they are involved in the transcription of nearby genes and may change the expression of said gene. In some cases,  Alu domains can be detrimental and result in inherited disorders. The following diseases have been associated with the presence of Alu domains: AD, Lung cancer, and Gastric cancer \cite{tseng2013oxidative}.
+
+In order to find the Alu domains present in our sequences, we used Dfam website (https://www.dfam.org/). 
 The Dfam database is an open collection of Transposable Element DNA sequence alignments, hidden Markov Models (HMMs), consensus sequences, and genome annotations. 
 By using the sequence search we find the Alu domains of the BC200 and its homologs. 
 Comparing the Alu domain structure gives us a suitable result for the RNA function.
 
 \subsection{Finding Conserved Parts of BC200}
+
 Over many generations, random mutations and deletions can change nucleic acid sequences in the genome of an evolutionary lineage. 
 Chromosomal rearrangement may also recombine or delete sequences. 
 Conserved sequences are sequences which persist in the genome despite such forces, and have slower rates of mutation than the background mutation rate\cite{kimura1974some}.
@@ -169,7 +170,7 @@ The output format is in ClustalW, and the guide tree is shown below.
 \begin{figure}[ht]
   \centering
   \label{fig:Guide-tree}
-  \includegraphics[width=0.4\textwidth]{figs/guidetree.png}
+  \includegraphics[width=0.55\textwidth]{figs/guidetree.png}
   \caption{Multiple Sequence Alignment Guide Tree}
 \end{figure}
 
@@ -184,7 +185,7 @@ This is also the case for the BC200 homologs from Macaca mulatta, Papio hamadrya
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.485\textwidth]{figs/phylogenetic-tree.jpg}
+  \includegraphics[width=0.5\textwidth]{figs/phylogenetic-tree.jpg}
   \caption{Phylogenetic tree of BC200 and hominoidea homologs. The numbers at each node are the bootstrap support values obtained by maximum likelihood.}
   \label{fig:phylo-tree}
 \end{figure}
@@ -304,7 +305,7 @@ Additionally, we have shown that the four most closely related hominoidea homolo
 Although, there are many papers suggest that presence of beta-amyloid can be the cause of Alzheimer disease, we cannot be certain that it is the real cause. 
 There are biological evidence that contradict this hypothesis \cite{selkoe2016amyloid}. 
 As mentioned above, overexpression of BC200 will increase expression of BACE1, which in turn generates beta-amyloid. 
-Although there is high similarity between BC200 lncRNA in Homo sapiens and in Pan paniscus and Pongo pygmaeus, this does not definitively answer the questions of whether or not AD is uniquely human, it can be just a warrent for furthure research in this area. 
+Although there is high similarity between BC200 lncRNA in Homo sapiens and in Pan paniscus and Pongo pygmaeus, this does not definitively answer the questions of whether or not AD is a uniquely human disease, it can be just a warrent for furthure research in this area. 
 It's worth mentioning that, all of the results that we get are done by computer simulation, which are using simipilifying assumptions in their algorithm. 
 But in the organism body, conditions may be different, so each long non-coding RNA function can be different too. 
 Alzheimer’s disease is extremely complex and this work is only aimed determining one facet of how AD may proceed in hominoidea other than homo sapiens. 
