@@ -8,7 +8,9 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage[font=small,labelfont=bf]{caption}
-\usepackage{subcaption}
+\usepackage[font=small,labelfont=bf]{subcaption}
+
+\pagenumbering{arabic}
 
 \begin{document}
 \input{commands.tex}
@@ -224,7 +226,7 @@ The Alu domain of the mammalian signal recognition particle (SRP) comprises the 
   \label{fig:bc200-structure}
 \end{figure}
 
-Finding the Alu domain of BC200 and its homologs (supplementary info), we concluded that the Alu domain between human BC200 and its Selected homologs are nearly identical. So, their function in brain may be same with each other. 
+Finding the Alu domain of BC200 and its homologs (see appendix \derek{add which appendix sections}), we concluded that the Alu domain between human BC200 and its Selected homologs are nearly identical. So, their function in brain may be same with each other. 
 Figures \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pongo-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (hominidae). 
 Additionally, we have chosen to depict the RNA secondary structure of the Hylobates lar BC200 homolog in Figure \ref{fig:hylobates-structure}. 
 While Hylobates lar is not a great ape, it is still part of the hominoidea superfamily, and Phylogenetic analysis revealed that it was closely related to BC200.
@@ -264,15 +266,17 @@ While Hylobates lar is not a great ape, it is still part of the hominoidea super
 
 \subsection{Finding Conserved Parts of the Sequence}
 
+\derek{Reference the proper appendix section for alignment}
+
 Using multiple sequence alignment we aligned BC200 with its four mostly related homologs to find the conserved parts of the sequence.
 Here is the alignment result:
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/alignment.png}
-  \caption{BC200 and it's homologs ClustalW alignment Result}
-  \label{fig:alignment result}
-\end{figure}
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.4\textwidth]{figs/alignment.png}
+%  \caption{BC200 and it's homologs ClustalW alignment Result}
+%  \label{fig:alignment result}
+%\end{figure}
 
 It can be concluded from the results, most parts of the BC200 sequence are conserved. 
 Non-coding sequences important for gene regulation, such as the binding or recognition sites of ribosomes and transcription factors. 
@@ -316,7 +320,7 @@ Our results can be a warrent fro furthure research on the topic, using laborator
 
 \section{Conclusion}\label{sec:conclusion}
 
-In this paper our goal was to determine if there was evidence which supports the hypothesis that Alzheimer’s disease is uniquely human. In order to determine if such evidence exists we first performed phylogenetic analysis to determine candidate species for RNA secondary structure analysis. Once we had determined the RNA secondary structure for the four most closely related hominoidea homologs of BC200, we compared their secondary structures to the secondary structure of Homo sapiens BC200. We determined that the Alu domain of Homo sapiens, Pan paniscus, and Pongo pygmaeus, Gorilla gorilla and Hylobates lar BC200 are similar. Further analysis determined that more than 88\% of Homo sapiens BC200 is conserved during evolution, as shown in figure \ref{fig:alignment result}. While much of the Homo sapiens BC200 sequence is conserved, all of the homologs which we analyzed contain many extra nucleotides. The result of a different sequence length may suggest that BC200 has a different regulatory function each host organism. But other results, including same alu elements, their connection with each other through phylogenetic tree and the existence of a big portion of conservered parts in BC200, may suggest that their function should be similiar. In conclusion, our analysis of BC200 homologs found in hominoidea suggest more research on the topic, since we cannot either confirm or refuse supports the conclusion presented by Drummond \emph{et al.} that Alzheimer’s Disease is uniquely human.
+In this paper our goal was to determine if there was evidence which supports the hypothesis that Alzheimer’s disease is uniquely human. In order to determine if such evidence exists we first performed phylogenetic analysis to determine candidate species for RNA secondary structure analysis. Once we had determined the RNA secondary structure for the four most closely related hominoidea homologs of BC200, we compared their secondary structures to the secondary structure of Homo sapiens BC200. We determined that the Alu domain of Homo sapiens, Pan paniscus, and Pongo pygmaeus, Gorilla gorilla and Hylobates lar BC200 are similar. Further analysis determined that more than 88\% of Homo sapiens BC200 is conserved during evolution, as shown in figure \derek{Reference the proper appendix section for alignment}. While much of the Homo sapiens BC200 sequence is conserved, all of the homologs which we analyzed contain many extra nucleotides. The result of a different sequence length may suggest that BC200 has a different regulatory function each host organism. But other results, including same alu elements, their connection with each other through phylogenetic tree and the existence of a big portion of conservered parts in BC200, may suggest that their function should be similiar. In conclusion, our analysis of BC200 homologs found in hominoidea suggest more research on the topic, since we cannot either confirm or refuse supports the conclusion presented by Drummond \emph{et al.} that Alzheimer’s Disease is uniquely human.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs.bib}
