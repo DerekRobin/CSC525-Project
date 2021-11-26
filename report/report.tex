@@ -7,6 +7,7 @@
 \usepackage{parskip}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage[font=small,labelfont=bf]{subcaption}
 
@@ -133,7 +134,7 @@ Table \ref{tbl:accession} outlines the organism names and accession numbers for 
     \midrule
     \emph{Homo sapiens}    & NR\_001568.1 \\
     \emph{Pongo pygmaeus}  & AF067780.1 \\
-    \emph{Pan Paniscus}    & AF067778.1 \\
+    \emph{Pan paniscus}    & AF067778.1 \\
     \emph{Gorilla gorilla} & AF067779.1 \\
     \emph{Macaca mulatta}  & AF067784.1 \\
     \emph{Hylobates lar}   & AF067781.1 \\
@@ -195,7 +196,7 @@ The conservation percentage of BC200 was calculated by comparing the number of c
 
 The results of the phylogenetic analysis can be found in Fig. \ref{fig:phylo-tree}. 
 The tree shows that the \emph{Homo sapiens} BC200 lncRNA and the \emph{Gorilla gorilla} BC200 lncRNA are likely to share a common ancestor. 
-Similarly, the BC200 homologs from \emph{Pan Paniscus} and \emph{Hylobates lar} are likely to share a common ancestor. 
+Similarly, the BC200 homologs from \emph{Pan paniscus} and \emph{Hylobates lar} are likely to share a common ancestor. 
 This is also the case for the BC200 homologs from \emph{Macaca mulatta}, \emph{Papio hamadryas}, and \emph{Pongo pygmaeus}. 
 
 \begin{figure}[ht]
@@ -206,7 +207,7 @@ This is also the case for the BC200 homologs from \emph{Macaca mulatta}, \emph{P
 \end{figure}
 
 Additionally, Table \ref{tbl:distances} shows the pairwise distances between sequences which estimate the evolutionary divergence between sequences. 
-The evolutionary divergence estimates show that the four most closely related homologs of BC200 found in other \emph{Hominoidea} come from \emph{Pan Paniscus} (AF067778.1), \emph{Pongo pygmaeus} (AF067780.1), \emph{Hylobates lar} (AF067781.1), and \emph{Gorilla gorilla} (AF067779.1), in order of evolutionary distances. 
+The evolutionary divergence estimates show that the four most closely related homologs of BC200 found in other \emph{Hominoidea} come from \emph{Pan paniscus} (AF067778.1), \emph{Pongo pygmaeus} (AF067780.1), \emph{Hylobates lar} (AF067781.1), and \emph{Gorilla gorilla} (AF067779.1), in order of evolutionary distances. 
 Thus, the aforementioned BC200 homologs (AF067778.1, AF067780.1, AF067781.1, AF067779.1) are the closest relatives of BC200 and have their secondary structure analyzed in section \ref{sec:results-structure}.
 
 \begin{table*}[h]
@@ -239,7 +240,7 @@ The BC200 structure consist of three main parts: the Alu, A-rich, and unique dom
   \label{fig:bc200-structure}
 \end{figure}
 
-By comparing the Alu domain of BC200 and its homologs (see supplementary information), we concluded that the Alu domain between human BC200 and its selected homologs are nearly identical. 
+By comparing the Alu domain of BC200 and its homologs (see Appendix \ref{app:A}), we concluded that the Alu domain between human BC200 and its selected homologs are nearly identical. 
 From this conclusion, we can infer that the functions of each of the homologs may be the same as those of BC200. 
 Fig. \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pongo-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (\emph{Hominidae}). 
 Additionally, we have chosen to depict the RNA secondary structure of the \emph{Hylobates lar} BC200 homolog in Fig. \ref{fig:hylobates-structure}. 
@@ -257,7 +258,7 @@ While \emph{Hylobates lar} is not a great ape, it is still part of the \emph{Hom
   \begin{subfigure}[b]{0.4\textwidth}  
     \centering
     \includegraphics[width=\textwidth]{figs/rnapan.png}
-    \caption{BC200 RNA Secondary Structure of \emph{Pan Paniscus}}
+    \caption{BC200 RNA Secondary Structure of \emph{Pan paniscus}}
     \label{fig:pan-structure}
   \end{subfigure}
   \vskip\baselineskip
@@ -281,7 +282,7 @@ While \emph{Hylobates lar} is not a great ape, it is still part of the \emph{Hom
 \subsection{Finding Conserved Parts of BC200}
 
 Using multiple sequence alignment we aligned BC200 with its four mostly related homologs to find conserved parts of BC200. 
-The result of the multiple sequence alignment can be found in Appendix \ref{app:A}
+The result of the multiple sequence alignment can be found in Appendix \ref{app:B}
 
 From the multiple sequence alignment, we can conclude that a majority (88\%) of the BC200 homolog sequences are conserved. 
 Sequence conservation in non-coding RNAs is generally poor compared to protein-coding sequences, and base pairs that contribute to structure or function are often conserved instead \cite{johnsson2014evolutionary}. 
@@ -292,15 +293,15 @@ So, the following result does not support or refuse our hypothesis, the homologs
 
 In this study we first began by gathering known homologs of \emph{Homo sapiens} BC200 via NCBI Blast \cite{blastTool,madden2012blast}. 
 Using these homologs, we built the phylogenetic tree in order to determine which homologs were the most evolutionarily related. 
-Once we had determined that the BC200 homologs from \emph{Pan Paniscus}, \emph{Pongo pygmaeus}, \emph{Hylobates lar}, and \emph{Gorilla gorilla} were the most closely related to \emph{Homo sapiens} BC200, we used FORNA to determine their secondary structure \cite{lorenz2011viennarna}. 
-We found that the secondary structures of \emph{Homo sapiens} BC200, shown in Fig. \ref{fig:bc200-structure}, differs from that of of \emph{Gorilla gorilla}, \emph{Pan Paniscus}, and \emph{Pongo pygmaeus} BC200, shown in Fig. \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, \ref{fig:pongo-structure}.
-However, by comparing the Alu domains present in \emph{Homo sapiens} BC200 with the Alu domains of \emph{Gorilla gorilla}, \emph{Pan Paniscus}, and \emph{Pongo pygmaeus} BC200 we can say that their gene regulation functions may be similar. 
+Once we had determined that the BC200 homologs from \emph{Pan paniscus}, \emph{Pongo pygmaeus}, \emph{Hylobates lar}, and \emph{Gorilla gorilla} were the most closely related to \emph{Homo sapiens} BC200, we used FORNA to determine their secondary structure \cite{lorenz2011viennarna}. 
+We found that the secondary structures of \emph{Homo sapiens} BC200, shown in Fig. \ref{fig:bc200-structure}, differs from that of of \emph{Gorilla gorilla}, \emph{Pan paniscus}, and \emph{Pongo pygmaeus} BC200, shown in Fig. \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, \ref{fig:pongo-structure}.
+However, by comparing the Alu domains present in \emph{Homo sapiens} BC200 with the Alu domains of \emph{Gorilla gorilla}, \emph{Pan paniscus}, and \emph{Pongo pygmaeus} BC200 we can say that their gene regulation functions may be similar. 
 
 Here we showed that several \emph{Hominoidea} homologs of BC200 share evolutionary ancestors as shown in Fig. \ref{fig:phylo-tree}. 
 Additionally, we have shown that the four most closely related \emph{Hominoidea} homologs of \emph{Homo sapiens} BC200 have differing RNA secondary structures.
 Although many papers suggest that beta-amyloid may cause AD, there is biological evidence that contradicts this hypothesis \cite{selkoe2016amyloid}.
 As mentioned above, overexpression of BC200 will increase expression of BACE1, which in turn generates beta-amyloid. 
-Despite the high similarity between BC200 lncRNA in \emph{Homo sapiens} and in \emph{Pan Paniscus} and \emph{Pongo pygmaeus}, this does not definitively answer the question of whether or not AD is a uniquely human disease.
+Despite the high similarity between BC200 lncRNA in \emph{Homo sapiens} and in \emph{Pan paniscus} and \emph{Pongo pygmaeus}, this does not definitively answer the question of whether or not AD is a uniquely human disease.
 This indicates that further research in this area is needed to draw a definitive conclusion. 
 Alzheimer’s disease is extremely complex and this work is only aimed determining one facet of how AD may proceed in \emph{Hominoidea} other than \emph{Homo sapiens}. 
 In a recent review paper, Drummond \emph{et al.} discuss the many models of AD pathology including transgenic mice/rats, invertebrate animals, and \emph{in vitro} human cell culture models \cite{drummond2017alzheimer}. 
@@ -323,8 +324,8 @@ Consequently, the structures are approximations are should be thought of as such
 In this paper, we set out to determine if there was bioinformatic evidence that supports the hypothesis that AD is uniquely human. 
 In order to determine if such evidence exists we first performed phylogenetic analysis to determine candidate species for RNA secondary structure analysis. 
 Once we had determined the RNA secondary structure for the four most closely related \emph{Hominoidea} homologs of BC200, we compared their secondary structures to the secondary structure of \emph{Homo sapiens} BC200. 
-We determined that the Alu domain of \emph{Homo sapiens}, \emph{Pan Paniscus}, and \emph{Pongo pygmaeus}, \emph{Gorilla gorilla} and \emph{Hylobates lar} BC200 are structurally similar. 
-Further analysis determined that 88\% of \emph{Homo sapiens} BC200 sequence is conserved during evolution, as shown in appendix \ref{app:A}. 
+We determined that the Alu domain of \emph{Homo sapiens}, \emph{Pan paniscus}, and \emph{Pongo pygmaeus}, \emph{Gorilla gorilla} and \emph{Hylobates lar} BC200 are structurally similar. 
+Further analysis determined that 88\% of \emph{Homo sapiens} BC200 sequence is conserved during evolution, as shown in Appendix \ref{app:B}. 
 While much of the \emph{Homo sapiens} BC200 sequence is conserved, the BC200 homologs were much longer than that of \emph{Homo sapiens} BC200.
 The result of a different RNA secondary structure may suggest that BC200 has a different regulatory function each host organism.
 Other results, including having the same Alu domains, the connection of each homolog through the phylogenetic tree, and the existence of a large portion of conserved nucleotides in BC200, suggests that their function may be similar. 
@@ -338,8 +339,13 @@ In conclusion, our analysis of BC200 homologs in \emph{Hominoidea} suggest that 
 \onecolumn
 \appendices
 
+\includepdf[pages=-, height=0.8\paperheight, pagecommand=\section{Dfam Analysis of Alu Domains}\label{app:A}\subsection{\emph{Homo sapiens}}]{figs/human-bc200-alu-domain.pdf}
+\includepdf[pages=-, height=0.8\paperheight, pagecommand=\subsection{\emph{Gorilla gorilla}}]{figs/gorilla-bc200-alu-domain.pdf}
+\includepdf[pages=-, height=0.8\paperheight, pagecommand=\subsection{\emph{Pan paniscus}}]{figs/pan-bc200-alu-domain.pdf}
+\includepdf[pages=-, height=0.8\paperheight, pagecommand=\subsection{\emph{Pongo pygmaeus}}]{figs/pongo-bc200-alu-domain.pdf}
+
 \section{ClustalW Multiple Sequence Alignment of BC200 and \emph{Hominoidea} Homologs}
-\label{app:A}
+\label{app:B}
 
 \begin{figure}[ht]
   \centering
