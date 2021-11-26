@@ -163,7 +163,7 @@ Alu domains (or elements) are sections of RNA which are responsible for for the 
 
 In order to find the Alu domains present in our sequences, we used Dfam website \cite{storer2021dfam}. 
 The Dfam database is an open collection of Transposable Element DNA sequence alignments, hidden Markov Models (HMMs), consensus sequences, and genome annotations. 
-By using the sequence search we find the Alu domains of the BC200 and its homologs. 
+By using the sequence search we find the Alu domains of the BC200 and its homologs. We performed a sequence search for each of the target lnc RNAs, then by looking in the result tab we compared the first row name of the diagram for each sequence search to others, if they have the same name it means that they have the same Alu elements. 
 Comparing the Alu domain structure gives us a suitable result for the RNA function.
 
 \subsection{Finding Conserved Parts of BC200}
@@ -175,7 +175,7 @@ One of the best ways for visualize conserved sequences during evolution, is mult
 Here, we aligned BC200 and the four most related homologs with each other to find the conserved parts of the sequence. 
 We used Clustal Omega for aligning the sequences \cite{madeira2019embl}. 
 The CLUSTAL format includes a plain-text key to annotate conserved columns of the alignment, denoting conserved sequence (*), conservative mutations (:), semi-conservative mutations (.), and non-conservative mutations ( ). 
-The output format is in ClustalW, and the guide tree is shown below.
+The output format is in ClustalW, and the guide tree is shown below. By counting the number of nucleotides peresent in the human BC200 and then counting the number of nucleotides which are conserved, we calculated the conservation percentage.
 
 \begin{figure}[ht]
   \centering
