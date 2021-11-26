@@ -16,7 +16,7 @@
 \setlist[questions,1]{label=RQ\arabic*.,ref=RQ\arabic*}
 \setlist[questions,2]{label=(\alph*),ref=\thequestionsi(\alph*)}
 
-\title{Phylogenetic and Structural Analysis of BC200 and Hominoidea Homologs}
+\title{Phylogenetic and Structural Analysis of BC200 and \emph{Hominoidea} Homologs}
 
 \author{Derek Robinson, Mina Emadi, Mazyar Ghezelji\\
 University of Victoria\\
@@ -26,14 +26,14 @@ Victoria, Canada \\
 \maketitle
 
 \begin{abstract}
-Alzheimer’s disease (AD) is a neurodegenerative disorder, resulting from synaptic plasticity failure in neurons, which greatly affects the cognitive ability of patients. 
-AD is thought to be caused by the accumulation of beta-amyloid protein and tau protein. Abnormal levels of both these proteins can disrupt cell functions and eventually cause diseases such as AD. 
+Alzheimer’s disease (AD) is a neurodegenerative disorder resulting from synaptic plasticity failure in neurons, which greatly affects the cognitive ability of patients. 
+AD is linked to the accumulation of beta-amyloid protein and tau protein, which in abnormal levels can disrupt cell functions and potentially lead to diseases such as AD. 
 Previous studies have suggested that AD is a uniquely human disease. 
-In this paper, we investigate this claim by analyzing genetic similarities between humans and other species of the Hominoidea superfamily.
-We break down our problem to two crucial parts; performing phylogenetic analysis of a long non-coding RNA associated with AD named Brain Cytoplasmic 200 lncRNA (BC200) and investigating the structural differences between BC200 and its four most closely related hominoidea homologs. 
-We start by first performing a Blast search to determine similar sequences, followed by building phylogenetic tree of the sequences so that we can determine which homologs are closely related.
-We then observe the most similar sequences and build their secondary structure, which then can be used to to compare functions of BC200 and its homologs.
-Although we found some similarities between these sequences, these comparisons reveal some structural differences between human BC200 and its homologs which means that their functions in body may be different.
+In this paper, we investigate this claim by analyzing genetic similarities between humans and other species of the \emph{Hominoidea} superfamily.
+We break down our problem into two crucial parts; performing phylogenetic analysis of a long non-coding RNA associated with AD named Brain Cytoplasmic 200 lncRNA (BC200), and investigating the structural differences between BC200 and its four most closely related \emph{Hominoidea} homologs. 
+We start by first performing a NCBI Blast search to determine similar sequences, followed by building a phylogenetic tree to determine closely related homologs.
+We then observe the most similar sequences and build their secondary structures, which are then used to compare functions of BC200 and its homologs.
+Although these sequences are similar, secondary structure comparison revealed structural differences between human BC200 and its homologs, meaning that they may exert different functions in the body.
 As a result, our findings neither support nor refute that AD is a uniquely human disease.
 
 \end{abstract}
@@ -43,20 +43,21 @@ As a result, our findings neither support nor refute that AD is a uniquely human
 Alzheimer's disease (AD) is a neurodegenerative disease which greatly affects the lives of those who are diagnosed and those who care for the diagnosed. 
 In the United States, 6.2 million patients are estimated to be living with AD and it is the sixth leading cause of death for American adults \cite{AlzheimersDisease}. 
 In Canada, over 747,000 patients are living with AD, or another form of dementia \cite{ADcanada}. 
-Symptoms of AD range from memory loss and poor judgement in mild cases to the inability to communicate and seizures in severe cases \cite{alzheimersSigns}.
+In mild cases, patients with AD may exhibit memory loss and poor judgement \cite{alzheimersSigns}. 
+The symptoms of higher severity cases may include the the inability to communicate, seizures, and difficulty swallowing \cite{alzheimersSigns}.
 
-AD involves multiple cell types and signaling pathways \cite{zhang2021role}. As such, the collective knowledge of AD is spread across many different domains. 
-This spread of knowledge means that fully understanding AD in humans is difficult, let alone attempting to understand if the disease effects other species of the hominoidea superfamily.
+AD involves multiple cell types and signaling pathways \cite{zhang2021role}. \derek{We should specify a little bit more about the cell types and pathways} As such, the collective knowledge of AD is spread across many different domains. 
+This spread of knowledge means that fully understanding AD in humans is difficult, let alone attempting to understand if the disease affects other species of the \emph{Hominoidea} superfamily.
 Finch and Austad argue that with our current understanding of AD, it is not possible to determine if AD is uniquely human \cite{finch2015commentary}. 
 Thus, this paper explores one facet of AD pathogenesis, the long non-coding RNA (lncRNA) BC200. 
-BC200 has been implicated in AD as it upregulates the expression of b-site APP-cleaving enzyme1 (BACE1) \cite{li2018identification,zhang2021role}. 
-The upregulation of BACE1 in turn leads to higher levels of beta-amyloid (A$\beta$) in the brain, thus, disrupting cell function \cite{li2018identification,zhang2021role}. 
+BC200 has been implicated in AD bu upregulating the expression of b-site APP-cleaving enzyme1 (BACE1) \cite{li2018identification,zhang2021role}. 
+The upregulation of BACE1 in turn leads to higher levels of beta-amyloid (A$\beta$) in the brain, which can forms plaques, accumulate in neurons, and disrupt cell function. \cite{li2018identification,zhang2021role}. 
 
-In hopes of better understanding the role that hominoidea homologs of BC200 play in AD, we answer the following research questions:
+In hopes of better understanding the role that \emph{Hominoidea} homologs of BC200 play in AD, we answer the following research questions:
 
 \begin{questions}
   \item What does the phylogenetic tree of BC200 look like?
-  \item What structural differences exist between BC200 and its four most closely related hominoidea homologs?
+  \item What structural differences exist between BC200 and its four most closely related \emph{Hominoidea} homologs?
 \end{questions}
 
 The remainder of this paper is structured as follows: section \ref{sec:background} gives background into BC200 and the role it plays in AD, section \ref{sec:methods} lays out the methods used for selecting BC200 homologs and performing both the phylogenetic structural analysis, section \ref{sec:results} presents the results of our analysis, section \ref{sec:discussion} discusses the relevancy of the results, and section \ref{sec:conclusion} concludes the paper.
@@ -65,37 +66,38 @@ The remainder of this paper is structured as follows: section \ref{sec:backgroun
 
 \subsection{What is BC200?}
 
-BC200, sometimes referred to as BCYRN1, is a 200 nucleotide long RNA transcript which is found mostly in the brain \cite{tiedge1993primary}. 
-As a non-coding RNA, BC200 is not translated into protein but can be used as a potential therapeutic target and biomarker due to its regulatory role in biological processes involved in disease development \cite{zhang2021role,mus2007dendritic}. 
-This lncRNA has recently been studied extensively because of its role in regulating translation and inhibiting its initiation, as well as its impacts in the pathogenesis of Alzheimer's disease and cancer \cite{zhang2021role,tiedge1993primary}. 
-Because of the crucial role of BC200 in translation control, it impacts the synthesis of dendritic proteins which facilitates long-term plastic changes at the synapse \cite{mus2007dendritic}.
+BC200, sometimes referred to as BCYRN1, is a 200 nucleotide long RNA transcript which is found predominantly in the brain \cite{tiedge1993primary}. 
+As a lncRNA, BC200 is not translated into protein, but can be used as a potential therapeutic target and biomarker due to its regulatory role in biological processes involved in disease development \cite{zhang2021role,mus2007dendritic}. 
+This lncRNA has recently been studied extensively due to its regulatory role in translation, as well as its pathogenic impact in AD \cite{zhang2021role,tiedge1993primary}. 
+Because of the crucial role BC200 plays in translation control, it impacts the synthesis of dendritic proteins which facilitates long-term plastic changes at the synapse \cite{mus2007dendritic}.
 
 \subsection{The Relation Between AD and BC200}
 
 AD is a neurodegenerative disease resulting from synaptic plasticity failure in neurons \cite{mus2007dendritic}. 
-It is a complex disease, meaning that it involves multiple cell types and signaling pathways \cite{zhang2021role}.
+It is a complex disease, meaning that it involves multiple cell types and signaling pathways \cite{zhang2021role}. 
+\derek{which cell types and pathways?}
 
-AD is thought to occur due to the accumulation of two proteins in the brain. 
-One of them is beta-amyloid (A$\beta$) which accumulates in neurons, forms plaques, and disrupts cell functions. 
-The other one is hyper-phosphorylated tau protein which in abnormal levels can form neurofibrillary tangles in neurons and block synaptic transmissions \cite{zhang2021role}.
+One protein implicated in the onset of AD is beta-amyloid. 
+A$\beta$, a cleavage product of the amyloid precursor protein (APP), is generated by b-site APP-cleaving enzyme1 (BACE1) and $\gamma$-secretase complex. 
+Beta-amyloid strongly influences the pathogenesis of AD due to the formation of plaques, accumulation in neurons, and disruption of cell functions. 
+Similarly, abnormally high levels of hyperphosphorylated tau can form neurofibrillary tangles in neurons and block synaptic transmissions \cite{zhang2021role}. 
+\derek{Do we really need to talk about tau if it's unrealted to BC200?} 
 
-A$\beta$, a cleavage product of the amyloid precursor protein (APP), is generated by b-site APP-cleaving enzyme1 (BACE1) and $\gamma$-secretase complex, and it strongly influences the pathogenesis of AD. 
-Inhibition of BACE1 activity and the subsequent reduction in A$\beta$ levels may cure or prevent AD \cite{li2018identification,zhang2021role}.
-
-BC200 facilitates AD pathogenesis by upregulating A$\beta$ production through the modulation of BACE1 expression. 
-The inhibition of BC200 significantly suppresses BACE1 expression, increases cell viability and reduces cell apoptosis in an AD model, and these effects are reversed by BC200 over-expression \cite{li2018identification,zhang2021role}.
+BC200 facilitates AD pathogenesis by increasing A$\beta$ production through the upregulation of BACE1 expression. 
+The inhibition of BC200 significantly suppresses BACE1 expression, increases cell viability and reduces cell apoptosis in an AD model, and these effects are reversed by BC200 over-expression \cite{li2018identification,zhang2021role}. Inhibition of BACE1 activity subsequently leads to a reduction in A$\beta$ levels and may cure or prevent AD \cite{li2018identification,zhang2021role}.
 
 Many researches have demonstrated the important role of BC200 in AD. 
-El Mus \emph{et al.} show that there are steady decline in BC200 level from age 49 to 86, but, in AD brain its level was substantially higher\cite{mus2007dendritic}. 
-They also observe that BC200 expression is increased in brain areas that are involved in AD and it is parallel with severity of disease. 
-Huanyen Li \emph{et al.} establish an AD cell model over expressing A$\beta$1-42 to observe the effects of BC200 on the cell viability and apoptosis and to investigate the associated underlying mechanisms\cite{li2018identification} . 
-They observe that BC200 and BACE1 were increased upon treatment with A$\beta$1-42, and inhibition of BC200 rescued this A$\beta$1-42-mediated dysfunction, as indicated by the interaction of BC200 directly targeting BACE1. 
-Moreover, inhibition of BC200 increased AD cell growth and reduced cells apoptosis. 
+Mus \emph{et al.} show that there is a steady decline in BC200 levels from ages 49 to 86, but a substantially higher amount was detected in AD patients \cite{mus2007dendritic}. 
+They also observe that BC200 expression is increased in brain areas that are implicated in AD and it is correlated with disease severity. 
+Li \emph{et al.} establish an AD cell model which over-expresses A$\beta$ 1-42 to observe the effects of BC200 on cell viability on cell viability, apoptosis, and to investigate it's mechanistic role on these processes \cite{li2018identification}. 
+They observe that BC200 and BACE1 \derek{what was increased?} were increased upon treatment with A$\beta$ 1-42. 
+Inhibition of BC200 rescued this A$\beta$ 1-42 mediated dysfunction, as indicated by the interaction of BC200 directly targeting BACE1. 
+Moreover, inhibition of BC200 increased AD cell growth and reduced cell apoptosis. 
 They demonstrate that BC200 is a potent positive regulator of BACE1 in AD cells and in conclusion, lncRNA BC200 facilitates AD pathogenesis by up-regulating A$\beta$ through BACE1.  					 			 		 	 
 
 \section{Materials and Methods}\label{sec:methods}
 
-The methodology workflow we followed is presented in figure \ref{fig:methods}.
+The methodology workflow we followed is presented in Fig. \ref{fig:methods}.
 
 \begin{figure*}[ht]
   \centering
@@ -109,10 +111,10 @@ The methodology workflow we followed is presented in figure \ref{fig:methods}.
 The lncRNA BC200 was selected for phylogenetic and structural analysis due to the role it plays in AD as discussed in section \ref{sec:background}. 
 The homologs of BC200 were selected as a result of an NCBI Blast \cite{blastTool} search. 
 Specifically, Megablast \cite{morgulis2008database} with default parameters was used as it is able to compare closely related sequences \cite{amirmahani2018phylogenetic}. 
-From the Blast results, the top six sequences which are known BC200 homologs as indicated by the inclusion of BC200 in their name were chosen. 
+From the Blast results, the top six sequences of known BC200 homologs were chosen , identified by the inclusion of BC200 in their name. 
 Two of the top hits in the Blast results were complete bacterial artificial chromosome sequences for pan troglodytes. 
 Inclusion of these two sequences (accession numbers: AC185986.3, AC183594.3) caused errors in the analysis software described in section \ref{sec:phylo} and section \ref{sec:structure}, as such we did not consider these full chromosome sequences in our analysis. 
-Table \ref{tbl:accession} outlines the sequence name including the organism and the accession number of each of the chosen sequences. 
+Table \ref{tbl:accession} outlines the organism names and accession numbers for each of the chosen sequences. 
 
 \begin{table}[ht]
   \centering
@@ -122,60 +124,66 @@ Table \ref{tbl:accession} outlines the sequence name including the organism and 
     \toprule
     Organism Name & Sequence Accession Number \\
     \midrule
-    Homo sapiens    & NR\_001568.1 \\
-    Pongo pygmaeus  & AF067780.1 \\
-    Pan paniscus    & AF067778.1 \\
-    Gorilla gorilla & AF067779.1 \\
-    Macaca mulatta  & AF067784.1 \\
-    Hylobates lar   & AF067781.1 \\
-    Papio hamadryas & AF067782.1 \\
+    \emph{Homo sapiens}    & NR\_001568.1 \\
+    \emph{Pongo pygmaeus}  & AF067780.1 \\
+    \emph{Pan Paniscus}    & AF067778.1 \\
+    \emph{Gorilla gorilla} & AF067779.1 \\
+    \emph{Macaca mulatta}  & AF067784.1 \\
+    \emph{Hylobates lar}   & AF067781.1 \\
+    \emph{Papio hamadryas} & AF067782.1 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Phylogenetic Analysis}\label{sec:phylo}
 
-The lncRNA sequences in table \ref{tbl:accession} were subject to phylogenetic analysis.
-The phylogenetic tree was built with the MEGA11 \cite{tamura2021mega11} bioinformatics software. 
-First the sequences outlined in table \ref{tbl:accession} were aligned using the MEGA11 alignment module. 
-The multiple sequence alignment was performed using the MUSCLE algorithm with default parameters \cite{edgar2004muscle}. 
-Once the multiple sequence alignment had been performed in MEGA11, it was then possible to build the phylogenetic tree. 
+The lncRNA sequences in Table \ref{tbl:accession} were subject to phylogenetic analysis.
+The phylogenetic tree was built using the MEGA11 \cite{tamura2021mega11} bioinformatics software. 
+The sequences outlined in Table \ref{tbl:accession} were aligned using the MEGA11 alignment module. 
+The multiple sequence alignment was performed using the MUSCLE algorithm \cite{edgar2004muscle} with default parameters in the MEGA11 alignment module. 
+Once the multiple sequence alignment had been performed, it was then possible to build the phylogenetic tree. 
 
 The phylogenetic tree was built using the maximum likelihood statistical method and Tamura-Nei substitution model \cite{tamura1993estimation, tamura2004prospects}. 
 The bootstrap method was used as a test of phylogeny with 500 replications.
 In order to further support the phylogenetic tree, estimates of evolutionary divergence were also calculated by MEGA11 \cite{tamura2021mega11}. 
-Analyses were conducted using Maximum Composite Likelihood and the Tamura-Nei model \cite{tamura1993estimation, tamura2004prospects}. 
+Evolutionary divergence estimates were calculated using Maximum Composite Likelihood and the Tamura-Nei model \cite{tamura1993estimation, tamura2004prospects}. 
 All ambiguous positions were removed for each sequence pair (pairwise deletion option). 
 
 \subsection{Structural Analysis}\label{sec:structure}
 
-In order to find RNA secondary structure of BC200 and four of closest homologs of it, we used FORNA, a platform for drawing the secondary RNA structure \cite{kerpedjiev2015forna}. 
-FORNA is able to draw the RNA secondary structure from the dot bracket notation provided by the user or from the minimum free energy (MFE) structure as calculated by RNAFold \cite{lorenz2011viennarna}. 
+In order to approximate the RNA secondary structure of BC200 and four of its closest homologs, we used FORNA, a platform which estimates RNA secondary structure \cite{kerpedjiev2015forna}. 
+FORNA is able to draw the RNA secondary structure from the dot bracket notation provided by the user or approximate the minimum free energy (MFE) structure as calculated by RNAFold \cite{lorenz2011viennarna}. 
 As this analysis aims at computationally determining a secondary structure, the latter option of using the MFE structure was employed. 
-Each of the five structures present in section \ref{sec:results-structure} was drawn individually. 
-First, we analyzed BC200 structure to get a better understanding of its function in body. 
-Knowing that BC200 structure consist of three main domains, we also look at its homologs from this view point. 
-Comparing each homolog structure to BC200, we divided them to three main domains like BC200 structure and based on each part function we analyzed the structural differences.
+Using structural similarity as a metric for functional similarity, we compared the structure of BC200 to its homologs.
+The approximated BC200 structure consists of three main domains, the Alu, A-rich, and unique domain. 
+Comparing each homolog structure into BC200, we divided them to three main domains as seen in the BC200 structure and analyzed structural differences in each domain.
 
 \subsection{Finding Alu Domains}
 
-Alu domains (or elements) are sections of RNA which are responsible for for the regulation of tissue-specific genes. Additionally, they are involved in the transcription of nearby genes and may change the expression of said gene. In some cases,  Alu domains can be detrimental and result in inherited disorders. The following diseases have been associated with the presence of Alu domains: AD, Lung cancer, and Gastric cancer \cite{tseng2013oxidative}.
+\derek{I still feel like this section should be in the background section as it's not exactly related to the methods of finding Alu domains}
+Alu domains (or elements) are sections of RNA which are responsible for for the regulation of tissue-specific genes. 
+Additionally, they are involved in the transcription of nearby genes and may change the expression of said gene. 
+In some cases,  Alu domains can be detrimental and result in inherited disorders such as AD, Lung cancer, and Gastric cancer \cite{tseng2013oxidative}. 
 
-In order to find the Alu domains present in our sequences, we used Dfam website \cite{storer2021dfam}. 
+In order to find the Alu domains present in our sequences, we used Dfam \cite{storer2021dfam}. 
 The Dfam database is an open collection of Transposable Element DNA sequence alignments, hidden Markov Models (HMMs), consensus sequences, and genome annotations. 
-By using the sequence search we find the Alu domains of the BC200 and its homologs. We performed a sequence search for each of the target lnc RNAs, then by looking in the result tab we compared the first row name of the diagram for each sequence search to others, if they have the same name it means that they have the same Alu elements. 
+By using the sequence search we identified the Alu domains of the BC200 and its homologs. 
+We performed a sequence search for each of the target lncRNAs and compared the first row names of the diagram for each sequence search. 
 Comparing the Alu domain structure gives us a suitable result for the RNA function.
 
 \subsection{Finding Conserved Parts of BC200}
 
+\derek{I also feel like these three sentences fit better in the background section as they aren't methods.}
 Over many generations, random mutations and deletions can change nucleic acid sequences in the genome of an evolutionary lineage. 
 Chromosomal rearrangement may also recombine or delete sequences. 
 Conserved sequences are sequences which persist in the genome despite such forces, and have slower rates of mutation than the background mutation rate\cite{kimura1974some}.
+
 One of the best ways for visualize conserved sequences during evolution, is multiple sequence alignment. 
 Here, we aligned BC200 and the four most related homologs with each other to find the conserved parts of the sequence. 
 We used Clustal Omega for aligning the sequences \cite{madeira2019embl}. 
 The CLUSTAL format includes a plain-text key to annotate conserved columns of the alignment, denoting conserved sequence (*), conservative mutations (:), semi-conservative mutations (.), and non-conservative mutations ( ). 
-The output format is in ClustalW, and the guide tree is shown below. By counting the number of nucleotides peresent in the human BC200 and then counting the number of nucleotides which are conserved, we calculated the conservation percentage.
+The guide tree for the multiple sequence alignment is shown in Fig. \ref{fig:Guide-tree}. 
+The conservation percentage of BC200 was calculated by comparing the number of conserved nucleotides to number of total nucleotides in the sequence.
 
 \begin{figure}[ht]
   \centering
@@ -188,20 +196,20 @@ The output format is in ClustalW, and the guide tree is shown below. By counting
 
 \subsection{Phylogenetic Tree of BC200}
 
-The results of the phylogenetic analysis can be found in figure \ref{fig:phylo-tree}. 
-The tree shows that the Homo sapiens BC200 lncRNA and the Gorilla gorilla BC200 lncRNA are likely to share a common ancestor. 
-Similarly, the BC200 homologs from Pan paniscus and Hylobates lar are likely to share a common ancestor. 
-This is also the case for the BC200 homologs from Macaca mulatta, Papio hamadryas, and Pongo pygmaeus. 
+The results of the phylogenetic analysis can be found in Fig. \ref{fig:phylo-tree}. 
+The tree shows that the \emph{Homo sapiens} BC200 lncRNA and the \emph{Gorilla gorilla} BC200 lncRNA are likely to share a common ancestor. 
+Similarly, the BC200 homologs from \emph{Pan Paniscus} and \emph{Hylobates lar} are likely to share a common ancestor. 
+This is also the case for the BC200 homologs from \emph{Macaca mulatta}, \emph{Papio hamadryas}, and \emph{Pongo pygmaeus}. 
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.5\textwidth]{figs/phylogenetic-tree.jpg}
-  \caption{Phylogenetic tree of BC200 and hominoidea homologs. The numbers at each node are the bootstrap support values obtained by maximum likelihood.}
+  \includegraphics[width=\columnwidth, keepaspectratio]{figs/phylogenetic-tree.jpg}
+  \caption{Phylogenetic tree of BC200 and \emph{Hominoidea} homologs. The numbers at each node are the bootstrap support values obtained by maximum likelihood.}
   \label{fig:phylo-tree}
 \end{figure}
 
-Additionally, table \ref{tbl:distances} shows the pairwise distances between sequences which estimate the evolutionary divergence between sequences. 
-The evolutionary divergence estimates show that the four most closely related homologs of BC200 found in other hominoidea come from Pan paniscus (AF067778.1), Pongo pygmaeus (AF067780.1), Hylobates lar (AF067781.1), and Gorilla gorilla (AF067779.1), in order of evolutionary distances. 
+Additionally, Table \ref{tbl:distances} shows the pairwise distances between sequences which estimate the evolutionary divergence between sequences. 
+The evolutionary divergence estimates show that the four most closely related homologs of BC200 found in other \emph{Hominoidea} come from \emph{Pan Paniscus} (AF067778.1), \emph{Pongo pygmaeus} (AF067780.1), \emph{Hylobates lar} (AF067781.1), and \emph{Gorilla gorilla} (AF067779.1), in order of evolutionary distances. 
 Thus, the aforementioned BC200 homologs (AF067778.1, AF067780.1, AF067781.1, AF067779.1) are the closest relatives of BC200 and have their secondary structure analyzed in section \ref{sec:results-structure}.
 
 \begin{table*}[h]
@@ -225,8 +233,9 @@ Thus, the aforementioned BC200 homologs (AF067778.1, AF067780.1, AF067781.1, AF0
 
 \subsection{Structural difference between BC200 and its homologs}\label{sec:results-structure}
 
-The BC200 structure consist of three main parts: A-rich domain, Alu domain and unique domain \cite{jung2014rna}.
-The Alu domain of the mammalian signal recognition particle (SRP) comprises the heterodimer of proteins SRP9 and SRP14 bound to the 5′ and 3′ terminal sequences of SRP RNA \cite{weichenrieder2000structure}. 
+The BC200 structure consist of three main parts: the Alu, A-rich, and unique domain \cite{jung2014rna}.
+\derek{Haley mentioned this aswell but how does this next sentence relate to BC200?}
+The Alu domain of the mammalian signal recognition particle (SRP) comprises the heterodimer of proteins SRP9 and SRP14 bound to the 5' and 3' terminal sequences of SRP RNA \cite{weichenrieder2000structure}. 
 
 \begin{figure}[h]
   \centering
@@ -235,66 +244,70 @@ The Alu domain of the mammalian signal recognition particle (SRP) comprises the 
   \label{fig:bc200-structure}
 \end{figure}
 
-Finding the Alu domain of BC200 and its homologs (see supplementary information), we concluded that the Alu domain between human BC200 and its Selected homologs are nearly identical. So, their function in brain may be same with each other. 
-Figures \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pongo-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (hominidae). 
-Additionally, we have chosen to depict the RNA secondary structure of the Hylobates lar BC200 homolog in Figure \ref{fig:hylobates-structure}. 
-While Hylobates lar is not a great ape, it is still part of the hominoidea superfamily, and Phylogenetic analysis revealed that it was closely related to BC200.
+By comparing the Alu domain of BC200 and its homologs (see supplementary information), we concluded that the Alu domain between human BC200 and its selected homologs are nearly identical. 
+From this conclusion, we can infer that the functions of each of the homologs may be the same as those of BC200. 
+Fig. \ref{fig:gorilla-structure}, \ref{fig:pan-structure}, and \ref{fig:pongo-structure} show the RNA secondary structure of the three most closely related BC200 homologs from great apes (\emph{Hominidae}). 
+Additionally, we have chosen to depict the RNA secondary structure of the \emph{Hylobates lar} BC200 homolog in Fig. \ref{fig:hylobates-structure}. 
+While \emph{Hylobates lar} is not a great ape, it is still part of the \emph{Hominoidea} superfamily, and Phylogenetic analysis revealed that it was closely related to BC200.
 
 \begin{figure*}[!h]
   \centering
   \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \includegraphics[width=\textwidth]{figs/rnagorilla.png}
-    \caption{BC200 RNA Secondary Structure in Gorilla gorilla}
+    \caption{BC200 RNA Secondary Structure of \emph{Gorilla gorilla}}
     \label{fig:gorilla-structure}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.4\textwidth}  
     \centering
     \includegraphics[width=\textwidth]{figs/rnapan.png}
-    \caption{BC200 RNA Secondary Structure in Pan paniscus}
+    \caption{BC200 RNA Secondary Structure of \emph{Pan Paniscus}}
     \label{fig:pan-structure}
   \end{subfigure}
   \vskip\baselineskip
   \begin{subfigure}[b]{0.4\textwidth}   
     \centering
     \includegraphics[width=\textwidth]{figs/rnapongo.png}
-    \caption{BC200 RNA Secondary Structure in pongo pygmaeus}
+    \caption{BC200 RNA Secondary Structure of \emph{Pongo pygmaeus}}
     \label{fig:pongo-structure}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}   
+  \begin{subfigure}[b]{0.5\textwidth}   
     \centering
     \includegraphics[width=\textwidth]{figs/rnahylobates.png}
-    \caption{BC200 RNA Secondary Structure in Hylobates lar}
+    \caption{BC200 RNA Secondary Structure of \emph{Hylobates lar}}
     \label{fig:hylobates-structure}
   \end{subfigure}
-  \caption{RNA Secondary Structures of Hominoidea BC200 Homologs, generated by FORNA \cite{kerpedjiev2015forna} using default parameters}
+  \caption{RNA Secondary Structures of \emph{Hominoidea} BC200 Homologs, generated by FORNA \cite{kerpedjiev2015forna} using default parameters}
   \label{fig:rna-sec-structure}
 \end{figure*}
 
-\subsection{Finding Conserved Parts of the Sequence}
+\subsection{Finding Conserved Parts of BC200}
 
-Using multiple sequence alignment we aligned BC200 with its four mostly related homologs to find the conserved parts of the sequence. 
+Using multiple sequence alignment we aligned BC200 with its four mostly related homologs to find conserved parts of BC200. 
 The result of the multiple sequence alignment can be found in Appendix \ref{app:A}
 
-It can be concluded from the results, most parts of the BC200 sequence are conserved. 
+From the multiple sequence alignment, we can conclude that a majority of the BC200 homolog sequences are conserved. 
+\derek{This next sentence isn't a full sentecnce and I am not sure what it's trying to say}
 Non-coding sequences important for gene regulation, such as the binding or recognition sites of ribosomes and transcription factors. 
 However, sequence conservation in non-coding RNAs is generally poor compared to protein-coding sequences, and base pairs that contribute to structure or function are often conserved instead \cite{johnsson2014evolutionary}. 
-So, the result shows that there should be a high similarity between BC200 RNA function in human body and in other species. 
+The result shows that there should be a high similarity between the function of BC200 in \emph{Homo sapiens} and closely related species. 
+\derek{I don't believe this data goes against your other findings so far. One of the most important pieces of information so far is that each homolog shares the same Alu domain. The Alu domain is implicated in gene regulation (? double check that), meaning that even though the secondary structures overall may not be extremely similar by these approximations, the key player (Alu domains) is the same}
 So, the following result does not support our hypothesis, and they suggest that Alzheimer’s can be shared between human and great apes.
 
 \section{Discussion}\label{sec:discussion}
 
-In this study we first began by gathering known homologs of Homo sapiens BC200 via NCBI Blast \cite{blastTool,madden2012blast}. 
-Then, using these homologs, we built the phylogenetic tree in order to determine which homologs were the most evolutionarily related. 
-Once we had determined that the BC200 homologs from Pan paniscus, Pongo pygmaeus, Hylobates lar, and Gorilla gorilla were the most closely related to Homo sapiens BC200 we individually built their RNA secondary structure. 
-We began with Homo sapiens BC200, in order to identify the differing domains present in the secondary structure. 
-By determining the domains present in Homo sapiens BC200, shown in figure \ref{fig:bc200-structure}, and comparing to the secondary structures of the homologs we observe some differences. 
-The main differences occur in the Alu domain of Homo sapiens BC200 and that of Gorilla gorilla and Hylobates lar. 
-However, we do observe similarities between the Alu domains of Homo sapiens BC200 and Pan paniscus and Pongo pygmaeus BC200. 
-Thus, based on the results we present here, we conclude that the function of BC200 in the brain of Homo sapiens versus other hominoidea \textbf{may} be different. 
+In this study we first began by gathering known homologs of \emph{Homo sapiens} BC200 via NCBI Blast \cite{blastTool,madden2012blast}. 
+Using these homologs, we built the phylogenetic tree in order to determine which homologs were the most evolutionarily related. 
+Once we had determined that the BC200 homologs from \emph{Pan Paniscus}, \emph{Pongo pygmaeus}, \emph{Hylobates lar}, and \emph{Gorilla gorilla} were the most closely related to \emph{Homo sapiens} BC200, we used FORNA to determine their secondary structure \cite{lorenz2011viennarna}. 
+\derek{Remainder of this paragraph: It was stated in the results earlier that the secondary structures of the Alu domains are nearly identical, so why are you now saying that they're different?}
+By comparing the domains present in \emph{Homo sapiens} BC200, shown in Fig. \ref{fig:bc200-structure}, we were able to discern certain structural differences. 
+The main differences occur in the Alu domain of \emph{Homo sapiens} BC200 and that of \emph{Gorilla gorilla} and \emph{Hylobates lar}. 
+However, we do observe similarities between the Alu domains of \emph{Homo sapiens} BC200 and \emph{Pan Paniscus} and \emph{Pongo pygmaeus} BC200. 
+Thus, based on the results we present here, we conclude that the function of BC200 in the brain of \emph{Homo sapiens} versus other \emph{Hominoidea} \textbf{may} be different. 
 
+\derek{Whole next paragraph: This is really good background info, this shouldn't be in your discussion unless you're directly relating this information to your results}
 The two main characteristics of a brain which has developed AD are the presence of beta-amyloid (A$\beta$) in cerebral vessels and abundance of neurofibrillary tangles (NFTs) \cite{deture2019neuropathological}. 
 In the Alzheimer’s brain, abnormal levels of this naturally occurring protein clump together to form plaques that collect between neurons and disrupt cell function. 
 Neurofibrillary tangles are abnormal accumulations of the tau protein, which collect inside neurons.  
@@ -304,23 +317,36 @@ These tangles block the neuron’s transport system, which harms the synaptic co
 Mus \emph{et al.} showed that long non-coding RNAs may be involved in AD \cite{mus2007dendritic}. 
 It was shown that the expression of the BC200 lncRNA, which is a translational repressor, is differentially regulated in normal aging and AD \cite{mus2007dendritic}. 
 
-Here we showed that several hominoidea homologs of BC200 share evolutionary ancestors as shown in figure \ref{fig:phylo-tree}. 
-Additionally, we have shown that the four most closely related hominoidea homologs of Homo Sapiens BC200 have differing RNA secondary structures and that they may act differently amongst each host organism. 
+Here we showed that several \emph{Hominoidea} homologs of BC200 share evolutionary ancestors as shown in Fig. \ref{fig:phylo-tree}. 
+\derek{next sentence: Again, in the results you concluded that the secondary structures are almost identical. You need to make this consistent}
+Additionally, we have shown that the four most closely related \emph{Hominoidea} homologs of \emph{Homo sapiens} BC200 have differing RNA secondary structures and that they may act differently amongst each host organism. 
+\derek{Next sentence: I don't know that this is necessary to include. If you're going to include this, you need to reference which papers suggest this. Perhaps change this to "Although many papers suggest that beta-amyloid may cause AD, there is biological evidence that contradicts this hypothesis"}
 Although, there are many papers suggest that presence of beta-amyloid can be the cause of Alzheimer disease, we cannot be certain that it is the real cause. 
 There are biological evidence that contradict this hypothesis \cite{selkoe2016amyloid}. 
 As mentioned above, overexpression of BC200 will increase expression of BACE1, which in turn generates beta-amyloid. 
-Although there is high similarity between BC200 lncRNA in Homo sapiens and in Pan paniscus and Pongo pygmaeus, this does not definitively answer the questions of whether or not AD is a uniquely human disease, it can be just a warrent for furthure research in this area. 
-It's worth mentioning that, all of the results that we get are done by computer simulation, which are using simipilifying assumptions in their algorithm. 
+Although there is high similarity between BC200 lncRNA in \emph{Homo sapiens} and in \emph{Pan Paniscus} and \emph{Pongo pygmaeus}, this does not definitively answer the questions of whether or not AD is a uniquely human disease.
+This indicates that further research in this area is needed to draw a definitive conclusion. 
+\derek{Next 2 sentences: I think that we should maybe add a limitations section to discuss that our results are limited by the assumptions of the algoirthms we use.}
+It's worth mentioning that, all of the results that we get are done by computer simulation, which are using simplifying assumptions in their algorithm. 
 But in the organism body, conditions may be different, so each long non-coding RNA function can be different too. 
-Alzheimer’s disease is extremely complex and this work is only aimed determining one facet of how AD may proceed in hominoidea other than homo sapiens. 
+Alzheimer’s disease is extremely complex and this work is only aimed determining one facet of how AD may proceed in \emph{Hominoidea} other than \emph{Homo sapiens}. 
 In a recent review paper, Drummond \emph{et al.} discuss the many models of AD pathology including transgenic mice/rats, invertebrate animals, and \emph{in vitro} human cell culture models \cite{drummond2017alzheimer}. 
-After reviewing the many models of AD pathology they conclude that AD is a uniquely human disease \cite{drummond2017alzheimer}. 
-Although, the conclusion of Drummond \emph{et al.} is not supported by our observations, it doesn't essentially contradict it. 
-Our results can be a warrent fro furthure research on the topic, using laboratory methods fro finding the role of BC200 in human and other species or searching for another long non-coding RNA that may have a role in the onset of Alzheimer disease.
+After reviewing the many models of AD pathology, they conclude that AD is a uniquely human disease \cite{drummond2017alzheimer}. 
+Although, the conclusion of Drummond \emph{et al.} is not supported by our observations, it does not necessarily contradict it. 
+Our results show that further research involving laboratory methods are necessary to understand the role of BC200 in other homonids, and that there may be other lncRNAs involved in the onset of AD.
 
 \section{Conclusion}\label{sec:conclusion}
 
-In this paper our goal was to determine if there was evidence which supports the hypothesis that Alzheimer’s disease is uniquely human. In order to determine if such evidence exists we first performed phylogenetic analysis to determine candidate species for RNA secondary structure analysis. Once we had determined the RNA secondary structure for the four most closely related hominoidea homologs of BC200, we compared their secondary structures to the secondary structure of Homo sapiens BC200. We determined that the Alu domain of Homo sapiens, Pan paniscus, and Pongo pygmaeus, Gorilla gorilla and Hylobates lar BC200 are similar. Further analysis determined that more than 88\% of Homo sapiens BC200 is conserved during evolution, as shown in appendix \ref{app:A}. While much of the Homo sapiens BC200 sequence is conserved, all of the homologs which we analyzed contain many extra nucleotides. The result of a different sequence length may suggest that BC200 has a different regulatory function each host organism. But other results, including same alu elements, their connection with each other through phylogenetic tree and the existence of a big portion of conservered parts in BC200, may suggest that their function should be similiar. In conclusion, our analysis of BC200 homologs found in hominoidea suggest more research on the topic, since we cannot either confirm or refuse supports the conclusion presented by Drummond \emph{et al.} that Alzheimer’s Disease is uniquely human.
+In this paper, we set out to determine if there was bioinformatic evidence that supports the hypothesis that AD is uiquely human. 
+In order to determine if such evidence exists we first performed phylogenetic analysis to determine candidate species for RNA secondary structure analysis. 
+Once we had determined the RNA secondary structure for the four most closely related \emph{Hominoidea} homologs of BC200, we compared their secondary structures to the secondary structure of \emph{Homo sapiens} BC200. 
+We determined that the Alu domain of \emph{Homo sapiens}, \emph{Pan Paniscus}, and \emph{Pongo pygmaeus}, \emph{Gorilla gorilla} and \emph{Hylobates lar} BC200 are structurally similar. 
+Further analysis determined that 88\% of \emph{Homo sapiens} BC200 sequence is conserved during evolution, as shown in appendix \ref{app:A}. 
+While much of the \emph{Homo sapiens} BC200 sequence is conserved, the BC200 homologs were much longer than that of \emph{Homo sapiens} BC200.
+\derek{Next sentence: Not necessarily true, I would discuss (in your discussion as well) that this difference in sequence length may mean that certain parts of the BC200 sequence were not necessary for function, so they were dropped off throughout evolution. This happens quite often with many genes and I would maybe try to find a reference that talks about this?} 
+The result of a different sequence length may suggest that BC200 has a different regulatory function each host organism. 
+Other results, including having the same Alu domains, the connection of each homolog through the phylogenetic tree, and the existence of a large portion of conserved nucleotides in BC200, suggests that their function may be similar. 
+In conclusion, our analysis of BC200 homologs in \emph{Hominoidea} suggest that they may have conserved function in the body, but that more research on the topic is required to determine if AD is uniquely human.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs.bib}
@@ -330,7 +356,7 @@ In this paper our goal was to determine if there was evidence which supports the
 \onecolumn
 \appendices
 
-\section{ClustalW Multiple Sequence Alignment of BC200 and Hominoidea Homologs}
+\section{ClustalW Multiple Sequence Alignment of BC200 and \emph{Hominoidea} Homologs}
 \label{app:A}
 
 \begin{figure}[ht]
